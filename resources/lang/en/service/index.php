@@ -1,6 +1,6 @@
 <?php
 return [
-    'site_name' => 'Reviews4Results.com',
+    'site_name' => 'otzov1.ru',
     'delete' => 'Delete',
     'done' => 'Done',
     'reply' => 'Reply',
@@ -19,7 +19,7 @@ return [
     'sort-by' => 'Sort by',
     'sort' => 'Sort',
     'filter' => 'Filter',
-    'header_site_name' => 'Reviews4Results',
+    'header_site_name' => '',
     'header_site_name_dom' => '.com',
     'review_naming' => 'Review :name',
     'person' => 'Review Person',

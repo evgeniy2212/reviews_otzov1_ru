@@ -9,5 +9,5 @@
 
     Respectfully.
 
-    The Reviews4Results Team
+    The  Team
 @endcomponent

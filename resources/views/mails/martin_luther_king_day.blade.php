@@ -5,9 +5,9 @@
 
     In the reverend’s own words, “Life’s most persistent and urgent question is, ‘What are you doing for others?’” We hope that you’ll reflect on this message of unity and cooperation as we all strive to make this world a better place, one day at a time.
 
-    Thank you for your reviews and the community you’ve helped to build with Reviews4Results.
+    Thank you for your reviews and the community you’ve helped to build with otzov1.ru.
 
     Respectfully.
 
-    The Reviews4Results Team
+    The otzov1.ru Team
 @endcomponent

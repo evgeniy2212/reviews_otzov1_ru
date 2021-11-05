@@ -1,6 +1,6 @@
 <?php
 return [
-    'site_name' => 'Reviews4Results.com',
+    'site_name' => 'otzov1.ru',
     'delete' => 'Удалить',
     'done' => 'Готово',
     'start' => 'Вперёд',
@@ -23,7 +23,7 @@ return [
     'sort-by' => 'Сортировать по',
     'sort' => 'Сортировать',
     'filter' => 'Фильтровать',
-    'header_site_name' => 'Reviews4Results',
+    'header_site_name' => 'otzov1.ru',
     'header_site_name_dom' => '.ru',
     'review_naming' => 'Отзывы о :name',
     'person' => 'Отзывы о Людях',

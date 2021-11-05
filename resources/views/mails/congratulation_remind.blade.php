@@ -13,5 +13,5 @@ Until that day, you still have time to prepare for this special day.
 
 Respectfully.
 
-The Reviews4Results Team
+The otzov1.ru Team
 @endcomponent

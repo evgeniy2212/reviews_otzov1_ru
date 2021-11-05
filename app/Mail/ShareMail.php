@@ -41,6 +41,6 @@ class ShareMail extends Mailable
                 'message' => $this->message,
                 'email' => $this->email
             ]
-        )->subject('Reviews4Results.com');
+        )->subject('otzov1.ru');
     }
 }

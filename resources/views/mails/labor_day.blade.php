@@ -7,5 +7,5 @@
 
     Respectfully.
 
-    The Reviews4Results Team
+    The otzov1.ru Team
 @endcomponent

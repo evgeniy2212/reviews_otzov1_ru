@@ -29,7 +29,7 @@ class UpdateProfileConfirmationMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Reviews4Results Confirmation')
+        return $this->subject('otzov1.ru Confirmation')
             ->markdown('mails.profile_updated',
             [
                 'name' => $this->name,

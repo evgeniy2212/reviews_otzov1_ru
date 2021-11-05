@@ -1,7 +1,7 @@
 @component('mail::message')
     <b>Veterans Day</b>
 
-    On this Veterans Day, the Reviews4Results team would like to offer our sincerest appreciation to the men and women who have served our country.
+    On this Veterans Day, the otzov1.ru team would like to offer our sincerest appreciation to the men and women who have served our country.
 
     To all veterans of all branches, thank you for your bravery and sacrifice. You’ve made America a safer and freer place to live, and its citizens owe you a debt of gratitude that can never be repaid.
 
@@ -11,5 +11,5 @@
 
     Respectfully.
 
-    The Reviews4Results Team
+    The otzov1.ru Team
 @endcomponent

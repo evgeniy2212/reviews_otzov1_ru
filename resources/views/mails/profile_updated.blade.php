@@ -1,10 +1,10 @@
 @component('mail::message')
 Hi {{ $name }},
 
-Your account at Reviews4Results has been updated. If you did not authorize this change, please contact info@reviews4results.com.
+Your account at otzov1.ru has been updated. If you did not authorize this change, please contact info@otzov1.ru.
 
 Thank you for your reviews!
 
 Regards,<br>
-—The Reviews4Results Team
+—The otzov1.ru Team
 @endcomponent

@@ -9,5 +9,5 @@ Your review is now live at {{ config('app.name') }}
 @endcomponent
 
 Regards,<br>
-—The Reviews4Results Team
+—The otzov1.ru Team
 @endcomponent
