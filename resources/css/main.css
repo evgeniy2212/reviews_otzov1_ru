@@ -1,0 +1,183 @@
+html, body {
+    background: no-repeat url(../images/background.jpg); /* Путь к фоновому изображению */
+    background-color: #ebecf0; /* Цвет фона */
+    background-size: 100%;
+    height: 100%;
+}
+.container {
+    /*width: 74%;*/
+    width: calc(100% - 290px);
+    /*padding-right: 0px;*/
+    /*max-width: 1300px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+.section {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    height: calc(100% - 235px);
+}
+
+/*--thank you pop starts here--*/
+.thank-you-pop{
+    width:100%;
+    padding:20px;
+    text-align:center;
+}
+.thank-you-pop img{
+    width:76px;
+    height:auto;
+    margin:0 auto;
+    display:block;
+    margin-bottom:25px;
+}
+
+.thank-you-pop h1{
+    font-size: 42px;
+    margin-bottom: 25px;
+    color:#5C5C5C;
+}
+.thank-you-pop p{
+    font-size: 20px;
+    margin-bottom: 27px;
+    color:#5C5C5C;
+}
+.thank-you-pop h3.cupon-pop{
+    font-size: 25px;
+    margin-bottom: 40px;
+    color:#222;
+    display:inline-block;
+    text-align:center;
+    padding:10px 20px;
+    border:2px dashed #222;
+    clear:both;
+    font-weight:normal;
+}
+.thank-you-pop h3.cupon-pop span{
+    color:#03A9F4;
+}
+.thank-you-pop a{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 9px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #8BC34A;
+    border-radius: 17px;
+}
+.thank-you-pop a i{
+    margin-right:5px;
+    color:#fff;
+}
+#ignismyModal .modal-header{
+    border:0px;
+}
+/*--thank you pop ends here--*/
+
+.content-place {
+    height: calc(100vh - 230px);
+    overflow: auto;
+    width: 100%;
+    padding: 1%;
+    margin: 0 auto;
+    /*border: 3px solid #2f5496;*/
+    border: 3px double #2f5496;
+    outline: 1px solid #2f5496;
+    outline-offset: -4px;
+    background: #f2f2f2;
+    font-size: 0.8rem;
+}
+.left-border::before {
+    display: inline-block;
+    color: #673ab7;
+    content: ":";
+}
+.user-info span, .user-info img {
+    margin-left: 10px;
+}
+.user-info span {
+    font-size: 1rem!important;
+}
+.loginForm {
+    border: 3px solid #2f5496;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+}
+.headWelcome {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+.loginForm label {
+    font-size: 0.7rem;
+}
+.loginForm a {
+    font-size: 0.7rem;
+    text-align: left;
+}
+.loginForm input {
+    border-color: black;
+}
+.input, .select {
+    border-color: #a0a3af;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 1px;
+    max-height: 20px;
+    padding: 0 0;
+    text-align: center;
+    text-align-last: center;
+    background: #e7e6e6;
+}
+.loginButton, .rememberButton, #cancelButton {
+    border-color: #a0a3af;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 25px;
+    padding: 0 0;
+    text-align: center;
+    text-align-last: center;
+    background: #e7e6e6;
+    color: #1b1e21;
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 100%;
+}
+#cancelButton {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#cancelButton:hover, #createAccount a, #createAccount a:hover {
+    text-decoration: none;
+    color: #1b1e21;
+}
+#createAccount a {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+}
+#createAccount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #2f5496;
+    height: 10%;
+    margin-top: 1%;
+}
+
+.verifyRegisterControl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 0 0;
+}
+

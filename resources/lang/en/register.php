@@ -1,0 +1,21 @@
+<?php
+return [
+    'register' => 'Register',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'nickname' => 'Pseudonym name (optional)',
+    'city' => 'City',
+    'country' => 'Country',
+    'city_town' => 'City/Town',
+    'state' => 'Region',
+    'zip_code' => 'Zip Code',
+    'e-mail' => 'E-mail',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm password',
+    'confirm_email' => 'Confirm Email',
+    'current_password' => 'Current Password',
+    'new_password' => 'New Password',
+    'create_account' => 'Create a new account',
+    'two_factor_auth' => 'Two-Factor Authentication',
+    'two_factor_code' => 'We have sent you an email which contains your two-factor login code. If you haven’t received it,',
+];

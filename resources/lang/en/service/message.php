@@ -1,0 +1,26 @@
+<?php
+return [
+    'mail.hi_this' => 'Hi, this is',
+    'mail.to_the' => 'GO to the',
+    'mail.regards' => 'With best regards',
+    'log_into_account' => 'Log in to your account and leave your comment!',
+    'communication_reviewer' => 'Open for communication with reviewer',
+    'pseudonim' => 'Using this name will allow you to remain anonymous. Your email address will not be visible in your published review.',
+    'success_send_message' => 'Your message has been successfully sent!',
+    'delete_confirmation' => 'Are you sure you want to <b>DELETE</b> :item?',
+    'delete_confirmation_question' => 'Are you sure you want to <b>DELETE</b>',
+    'edit_confirmation_question' => 'Are you sure you want to <b>EDIT</b>',
+    'delete_confirmation_same' => 'and the same',
+    'person_old_confirm' => 'Since you rated this person 1 or 2 stars, we need to confirm that this person is at least 21 years old.',
+    'person_old_terms' => 'According to our Terms of Service, you may not rate any person who is under 21 years old with less than 3 stars. Any user who violates this rule more than once will permanently lose access to their account.',
+    'person_old_confirmation' => 'Yes, that person is at least 21 years old',
+    'share' => 'If you want to shere this website please enter an email address below',
+    'should_loged_to_review' => 'You should be logged in to create a review!',
+    'next_review' => 'We look forward to seeing your next review!',
+    'review_on_moderation' => 'Your review has been sent for moderation','review_find' => 'You can always find this review under the “Reviews” section of your account, where you’ll be able to change, delete, or reply whenever you like.',
+    'instruction_message' => 'Watch the helpful tutorials to learn new and interesting ways to use this site`s features',
+    'review_user_exist' => 'Sorry, but we cannot save your congratulation, a user with this name does not exist.',
+    'choose_characters' => 'You should write a review or choose one or more positive or negative characteristics.',
+    'review_already_exist' => 'It looks like you’ve already left a review about this person. To edit your review, please sign in to your Reviews4Info account in the section “Your Reviews"',
+    'review_publish_error' => 'Sorry, but we cannot save or publish your review. Please remove any explicit, obscene, or disrespectful language and resubmit. If you have any questions, please contact info@reviews4results.com'
+];

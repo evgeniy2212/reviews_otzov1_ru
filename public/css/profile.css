@@ -1,0 +1,1396 @@
+#deleteReviewForm, #editReviewForm, #deleteCommentForm, #deleteMessageForm {
+    border: 3px solid #2f5496;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.profile-review-place {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1% 1% 0;
+}
+.profile-single-review-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    width: 85%;
+    height: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+
+.profile-single-review-button, .profile-single-congratulation-button {
+    width: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 3px 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    .profile-single-review-content {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .profile-single-review-button,
+    .profile-single-congratulation-button {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .profile-single-review-button,
+    .profile-single-congratulation-button {
+        width: 100%;
+    }
+}
+.profile-single-comment-button{
+    width: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .profile-single-comment-button {
+        width: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+.profile-single-review-button a, .profile-single-comment-button a, .profile-single-congratulation-button a {
+    border-color: #a0a3af;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 1px;
+    max-height: 20px;
+    margin: 3px 0;
+    padding: 0 0;
+    text-align: center;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    background: #e7e6e6;
+    width: 80%;
+    color: #1b1e21;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+    .profile-single-review-button a, .profile-single-comment-button a, .profile-single-congratulation-button a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .profile-single-congratulation-button a {
+        width: 100%;
+    }
+}
+.profile-single-review-button a:hover, .profile-single-comment-button a:hover, .profile-single-congratulation-button a:hover {
+    text-decoration: none;
+    color: #1b1e21;
+}
+.profile-single-review-blocked {
+    background-color: rgba(255, 0, 0, 0.53);
+    max-height: 80px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 5px 5px 0 0;
+}
+.profile-complain-btn {
+    width: 25%;
+}
+@media screen and (max-width: 767px) {
+    .profile-complain-btn {
+        width: 50%;
+        margin: 0 auto 10px;
+    }
+    .profile-single-review-blocked {
+        margin: 0 0 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .profile-complain-btn {
+        width: 100%;
+    }
+}
+.profile-single-review-review, .profile-single-congratulation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 75%;
+    height: 100%;
+    padding: 0 0 0 5px;
+    line-height: 1.2rem;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 767px) {
+    .profile-single-review-review,
+    .profile-single-congratulation {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+.profile-single-congratulation .congratulation-category {
+    text-align: left;
+    text-shadow: 1px 1px 5px #2f5496;
+    float: left;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    font-family: "ImprintMTShadow";
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 0;
+}
+
+.profile-single-congratulation p {
+    text-align: left;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .profile-single-congratulation {
+        padding-right: 5px;
+    }
+    .profile-single-congratulation p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .profile-single-congratulation .congratulation-category {
+        width: 100%;
+        margin-bottom: 5px;
+        float: none;
+        text-align: center;
+    }
+}
+.profile-single-congratulation .congratulation-text {
+    text-align: justify!important;
+}
+.profile-single-congratulation .videoPreview{
+    width: 135px;
+    height: 100px;
+    border: 1px groove #4a92f8;
+    -o-object-fit: cover;
+    object-fit: cover;
+    float: right;
+    margin: 5px 5px 5px 0;
+}
+.profile-single-congratulation .previewImage{
+    width: 100px;
+    height: 100px;
+    border: 1px groove #4a92f8;
+    float: right;
+    margin: 5px 5px 5px 10px;
+}
+.single-congratulation-private {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-bottom: 1px groove #4a92f8;
+    overflow: hidden;
+    height: 130px;
+}
+@media screen and (max-width: 860px) {
+    .single-congratulation-private {
+        height: auto;
+        overflow: visible;
+    }
+    .congratulation-text-wrap {
+        overflow: hidden;
+        height: 35px;
+        -webkit-transition: height .5s;
+        -o-transition: height .5s;
+        transition: height .5s;
+    }
+}
+@media screen and (max-width: 767px) {
+    .single-congratulation-private {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.unread-single-congratulation-private {
+    background-color: #f5fcb3;
+}
+.profile-single-review-review span, .profile-single-review-review p {
+    text-align: left;
+    float: left;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.profile-single-review-review img {
+    float: right;
+    margin: 5px 5px 5px 5px;
+}
+.profile-single-review-review video {
+    float: right;
+    margin: 5px 5px 5px 5px;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+@media screen and (max-width: 1024px) {
+    .profile-single-review-review video {
+        -o-object-fit: contain;
+        object-fit: contain;
+        border-color: transparent;
+    }
+}
+.profile-single-review-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 85%;
+    padding-bottom: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .profile-single-review-item {
+        width: 100%;
+    }
+    .profile-single-review-item__inner {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .profile-single-review-review p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .profile-single-review-item__inner .profile-single-review-button {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+.profile-single-comment-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 85%;
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .profile-single-comment-item {
+        width: 100%;
+    }
+}
+
+.profile-single-comment-body{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 98%;
+    line-height: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.profile-single-comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-bottom: 1px groove #4a92f8;
+    padding: 10px 0;
+    min-height: 125px;
+}
+
+@media screen and (max-width: 767px) {
+    .profile-single-comment {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .profile-single-comment-body {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .profile-single-comment-body {
+        width: 100%;
+    }
+    .profile-single-comment {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.comment-textarea {
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+}
+.banners{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*text-align: center;*/
+    padding: 5% 2%;
+}
+.bannerTitle{
+    font-size: 1.6rem;
+    color: #454545c7;
+    margin: 0 0 1% 0;
+    padding: 0;
+    font-family: "ImprintMTShadow";
+    font-weight: 300;
+}
+
+@media (max-width: 1366px) {
+    .bannerContent{
+        font-size: 0.7rem;
+        margin: 0 0 1% 0;
+    }
+}
+@media (min-width: 1400px) {
+    .bannerContent{
+        font-size: 0.8rem;
+        margin: 0 0 1% 0;
+    }
+}
+select[id*='bannerType']{
+    min-width: 100%;
+}
+.bannerInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 0 0 0.8em 0;
+}
+.bannerInfo span {
+    padding: 0 5px 0 10px;
+}
+.bannerImageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 2% 0;
+}
+.bannerFileUpload {
+    /*border: 1px dashed #a0a3af;*/
+    border-color: #a0a3af;
+    border-style: dashed;
+    border-width: 1px;
+    display: inline-block;
+    padding: 3px 6px;
+    margin-top: 25px;
+    cursor: pointer;
+    background-color: #e7e6e6;
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+@media (max-width: 1366px) {
+    #bannerImagePreview{
+        width: 185px;
+        height: 90px;
+        border: 1px dashed #a0a3af;
+        margin: 0 0 5px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    #bannerTextPreview{
+        width: 310px;
+        height: 140px;
+        margin: 0 0 5px 0;
+    }
+}
+@media (max-width: 576px) {
+    #bannerTextPreview {
+        width: 100%;
+    }
+}
+@media (min-width: 1400px) {
+    #bannerImagePreview{
+        width: 310px;
+        height: 150px;
+        border: 1px dashed #a0a3af;
+        margin: 0 0 5px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    #bannerTextPreview{
+        width: 310px;
+        height: 200px;
+        margin: 0 0 5px 0;
+    }
+}
+#bannerImagePreview img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.bannerImagePreviewContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.bannerImagePreviewContainer input{
+    margin-top: 5px;
+}
+.create-congratulation{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*text-align: center;*/
+    font-size: 12px;
+}
+#congratulationForm{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.congratulationTitle{
+    font-size: 1.6rem;
+    color: #454545c7;
+    margin: 0 0 1% 0;
+    padding: 0;
+    font-family: "ImprintMTShadow";
+    font-weight: 300;
+}
+#congratulationForm .input, #congratulationForm select, #importantDateForm .input, #importantDateForm select {
+    border-color: #2f5496;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1px;
+    max-height: 22px;
+    min-height: 22px;
+    max-width: 100%;
+    padding: 0 0;
+    text-align: center;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    background: #fcfbfb;
+    font-size: 0.8rem;
+}
+.congratulation-info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+    .congratulation-info-container {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .congratulation-info-container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 575px) {
+    #importantDateForm select {
+        -moz-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+    }
+}
+#congratulationForm, .congratulation-info-container div {
+    padding: 0 1px;
+}
+.profile-congratulation-user-inputs {
+    /*d-flex flex-row align-items-center flex-grow-1*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.profile-congratulation-user-inputs > * {
+    margin: 0 2px;
+}
+.create-congratulation-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    padding: 3px 0 0 0;
+    width: 100%;
+}
+.create-congratulation-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .profile-congratulation-user-inputs {
+        width: 100%;
+    }
+    .profile-congratulation-user-inputs div {
+        width: 50%;
+    }
+    .create-congratulation-media {
+        margin-bottom: 10px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 576px) {
+    .create-congratulation-name {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .profile-congratulation-user-inputs {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .profile-congratulation-user-inputs div {
+        width: calc(50% - 4px);
+    }
+    #congratulationForm .input, #congratulationForm select, #importantDateForm .input, #importantDateForm select {
+        width: 100%;
+    }
+    #congratulationForm .input {
+        padding-left: 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .congratulationTitle {
+        font-size: 1rem;
+    }
+    .profile-congratulation-user-inputs div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.congratulationContentContainer textarea {
+    resize: none;
+    width: 65%;
+    height: 100%;
+    min-height: 200px;
+    font-size: 0.8rem;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 1px;
+    margin: 0 10px;
+}
+.create-congratulation-image {
+    border: 1px solid #2f5496;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 3px 6px;
+    cursor: pointer;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    max-width: 150px;
+    text-align: center;
+    vertical-align: middle!important;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.videoRules {
+    font-size: 10px;
+    max-width: 150px;
+}
+#congratulationImagePreview{
+    width: 135px;
+    height: 135px;
+    border: 1px solid #2f5496;
+    margin: 0 0 5px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+#congratulationImagePreview img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.congratulationDefaultImages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*flex-direction: column;*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*max-height: calc(235px - 20%);*/
+    max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .congratulationDefaultImages {
+        margin-bottom: 15px;
+    }
+}
+.congratulationDefaultImagePreview{
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgba(44, 45, 49, 0.87);
+    margin: 5px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media screen and (max-width: 560px) {
+    .congratulationDefaultImagePreview {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.congratulationHighlight {
+    border: 2px solid #2f5496;
+}
+.congratulationDefaultImagePreview img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.congratulationControlContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 25%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.congratulationContentContainer {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.congratulationDefaultImagesContainer{
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 78%;
+    height: 100%;
+    max-height: 235px;
+    border: 1px solid #2f5496;
+    padding: 5px 0;
+    background-color: white;
+    margin: 0 0 0 2%;
+    overflow: hidden auto;
+}
+@media screen and (max-width: 767px) {
+    .congratulationDefaultImagesContainer {
+        width: 100%;
+        margin: 0 5px 10px;
+        padding-bottom: 10px;
+    }
+}
+.congratulationContentUpload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 35%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.congratulationImagePreviewContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+    .congratulationContentContainer,
+    .congratulationContentContainer textarea,
+    .congratulationControlContainer,
+    .congratulationContentUpload {
+        width: 100%;
+    }
+    .congratulationContentContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .congratulationContentContainer textarea {
+        margin: 0 3px 15px;
+        min-height: 150px;
+        height: auto;
+    }
+    .congratulationContentUpload {
+    }
+    .congratulationControlContainer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    #congratulationImagePreview {
+        margin-right: 10px;
+        height: 100px;
+        margin-bottom: 0;
+    }
+    #congratulationImagePreview img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .create-congratulation-image {
+        height: 50px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .congratulationImagePreviewContainer .videoPreview,
+    #congratulationImagePreview {
+        width: 120px;
+    }
+}
+.congratulationImagePreviewContainer input{
+    margin-top: 5px;
+}
+.congratulationVideoPreview {
+    display: none;
+    width: 135px;
+    height: 100px;
+    border: 1px groove #4a92f8;
+}
+.was-validated .invalid-selector {
+    border-color: #dc3545!important;
+}
+.was-validated .form-control:invalid {
+    border-color: #dc3545!important;
+}
+.profile-congratulation-filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid #2f5496;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 575px) {
+    .profile-congratulation-filters {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: auto;
+        text-align: left;
+    }
+    .profile-congratulation-filters select {
+        width: 100%;
+    }
+    .profile-congratulation-filters label {
+        margin-bottom: 0;
+    }
+}
+.important-date-form {
+    width: 100%;
+    max-height: 20%;
+    min-height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #2f5496;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 640px) {
+    .important-date-form {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+}
+.importantDateTitle{
+    font-size: 1.6rem;
+    color: #454545c7;
+    margin: 0 0 1% 0;
+    padding: 0;
+    font-family: "ImprintMTShadow";
+    font-weight: 300;
+}
+
+
+.submitImportantDateButton {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 640px) {
+    .submitImportantDateButton {
+        width: 100%;
+    }
+}
+
+.importantDateInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 0 0 0.8em 0;
+}
+.importantDateInfo > * {
+    margin: 0 5px;
+}
+.profile-important-date-filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 50px;
+    /*border-bottom: 1px solid #2f5496;*/
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.profile-important-date-control {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+}
+
+.profile-important-date-control button{
+    width: 150px;
+}
+.profile-single-important-date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+@media screen and (max-width: 767px) {
+
+    .profile-single-important-date {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 12px;
+    }
+    .importantDateTitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 640px) {
+    .importantDateInfo {
+        display: block;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .importantDateInfo > * {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .importantDateTitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+.profile-single-important-date-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    width: 95%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border: 1px solid #2f5496;
+    padding: 2px 10px;
+    font-size: 0.9rem;
+}
+.important-date-dull {
+    color: rgb(118, 118, 118);
+}
+.profile-single-important-date-name {
+    width: 38%;
+}
+.profile-single-important-date-type{
+    width: 43%;
+}
+.profile-single-important-date-date{
+    width: 19%;
+}
+@media screen and (max-width: 575px) {
+    .profile-important-date-filters {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+        justify-content: stretch;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .profile-important-date-filters select {
+        width: 100%;
+    }
+    .profile-important-date-control .otherButton {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile-important-date-control {
+        margin-bottom: 15px;
+    }
+    .profile-single-important-date-info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+        justify-content: stretch;
+    }
+    .profile-single-important-date-date,
+    .profile-single-important-date-type,
+    .profile-single-important-date-name {
+        width: 100%;
+    }
+}
+
+.profile-single-important-date .custom-checkbox+label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    margin: 0 0 0 10px;
+}
+.profile-single-important-date .custom-checkbox+label::before {
+    width: 2.1em;
+    height: 2.1em;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    border: 1px solid #2F5496;
+    border-radius: 0;
+    margin-right: .5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background: #fcfbfb;
+}
+.profile-single-important-date .custom-checkbox:checked+label::before {
+    border-color: #2F5496;
+    background-color: #2F5496;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.profile-single-important-date .custom-checkbox:disabled+label::before {
+    border-color: rgba(115, 115, 131, .92);
+    background-color: rgba(190, 208, 214, .78);
+}
+.create-review-label {
+    white-space: nowrap;
+    font-size: .8rem;
+}
+#importantDateForm select, #importantDateForm input {
+    font-size: .8rem;
+    max-width: 25%;
+}
+@media screen and (max-width: 640px) {
+    #importantDateForm select {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+.multiselect {
+    border-width: 1px;
+    border-radius: 1px;
+    max-height: 20px;
+    width: 100%;
+    padding: 0 0;
+    text-align: center;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    background: #fcfbfb;
+}
+
+#selectBox {
+    position: relative;
+}
+
+#selectBox select {
+    min-width: 100%;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    position: relative;
+    display: none;
+    border: 1px #dadada solid;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: rgba(115, 115, 131, 0.92);
+}
+
+#checkboxes .custom-checkbox+label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    margin: 0 0 0 10px;
+}
+#checkboxes .custom-checkbox+label::before {
+    width: 1.2em;
+    height: 1.2em;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    border: 1px solid #2F5496;
+    border-radius: 0;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background: #fcfbfb;
+}
+#checkboxes .custom-checkbox:checked+label::before {
+    border-color: #2F5496;
+    background-color: #2F5496;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+#checkboxes .custom-checkbox:disabled+label::before {
+    border-color: rgba(115, 115, 131, 0.92);
+    background-color: rgba(190, 208, 214, 0.78);
+}
+#importantDateRemindsButton {
+    width: 100%;
+}
+#importantDateRemindsButton .otherButton {
+    width: 50%;
+    height: 1.5em;
+    margin: 5px auto;
+}

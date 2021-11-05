@@ -1,0 +1,9 @@
+.contactsFields div{
+    font-size: 0.8rem;
+    padding: 0 0px;
+    text-align: left;
+}
+.contactsFields label {
+    margin: 0 0;
+    font-weight: 500;
+}
