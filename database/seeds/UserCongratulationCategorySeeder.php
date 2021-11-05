@@ -37,18 +37,18 @@ class UserCongratulationCategorySeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Christmas'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Columbus Day',
-                    'ru' => 'Columbus Day'
-                ],
-                'name' => [
-                    'en' => 'Columbus Day',
-                    'ru' => 'Columbus Day'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Columbus Day'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Columbus Day',
+//                    'ru' => 'Columbus Day'
+//                ],
+//                'name' => [
+//                    'en' => 'Columbus Day',
+//                    'ru' => 'Columbus Day'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Columbus Day'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Easter',
@@ -229,18 +229,18 @@ class UserCongratulationCategorySeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Starting a new business'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Thanksgiving',
-                    'ru' => 'Thanksgiving'
-                ],
-                'name' => [
-                    'en' => 'Thanksgiving',
-                    'ru' => 'Thanksgiving'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Thanksgiving'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Thanksgiving',
+//                    'ru' => 'Thanksgiving'
+//                ],
+//                'name' => [
+//                    'en' => 'Thanksgiving',
+//                    'ru' => 'Thanksgiving'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Thanksgiving'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Veterans Day',

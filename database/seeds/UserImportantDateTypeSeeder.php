@@ -24,18 +24,18 @@ class UserImportantDateTypeSeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Christmas'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Columbus Day',
-                    'ru' => 'Columbus Day'
-                ],
-                'name' => [
-                    'en' => 'Columbus Day',
-                    'ru' => 'Columbus Day'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Columbus Day'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Columbus Day',
+//                    'ru' => 'Columbus Day'
+//                ],
+//                'name' => [
+//                    'en' => 'Columbus Day',
+//                    'ru' => 'Columbus Day'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Columbus Day'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Easter',
@@ -132,18 +132,18 @@ class UserImportantDateTypeSeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Independence Day'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Juneteenth',
-                    'ru' => 'Juneteenth'
-                ],
-                'name' => [
-                    'en' => 'Juneteenth',
-                    'ru' => 'Juneteenth'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Juneteenth'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Juneteenth',
+//                    'ru' => 'Juneteenth'
+//                ],
+//                'name' => [
+//                    'en' => 'Juneteenth',
+//                    'ru' => 'Juneteenth'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Juneteenth'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Labor Day',
@@ -156,18 +156,18 @@ class UserImportantDateTypeSeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Labor Day'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Martin Luther King Jr. Day',
-                    'ru' => 'Martin Luther King Jr. Day'
-                ],
-                'name' => [
-                    'en' => 'Martin Luther King Jr. Day',
-                    'ru' => 'Martin Luther King Jr. Day'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Martin Luther King Jr. Day'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Martin Luther King Jr. Day',
+//                    'ru' => 'Martin Luther King Jr. Day'
+//                ],
+//                'name' => [
+//                    'en' => 'Martin Luther King Jr. Day',
+//                    'ru' => 'Martin Luther King Jr. Day'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Martin Luther King Jr. Day'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Memorial Day',
@@ -240,18 +240,18 @@ class UserImportantDateTypeSeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug('Promotion'),
                 'is_published' => true,
             ],
-            [
-                'title' => [
-                    'en' => 'Thanksgiving',
-                    'ru' => 'Thanksgiving'
-                ],
-                'name' => [
-                    'en' => 'Thanksgiving',
-                    'ru' => 'Thanksgiving'
-                ],
-                'slug' => \Illuminate\Support\Str::slug('Thanksgiving'),
-                'is_published' => false,
-            ],
+//            [
+//                'title' => [
+//                    'en' => 'Thanksgiving',
+//                    'ru' => 'Thanksgiving'
+//                ],
+//                'name' => [
+//                    'en' => 'Thanksgiving',
+//                    'ru' => 'Thanksgiving'
+//                ],
+//                'slug' => \Illuminate\Support\Str::slug('Thanksgiving'),
+//                'is_published' => false,
+//            ],
             [
                 'title' => [
                     'en' => 'Valentine’s Day',
