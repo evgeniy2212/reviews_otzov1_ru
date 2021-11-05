@@ -2,7 +2,7 @@
 return [
     'moderations' => 'Отзывы на модерацию',
     'data' => 'Данные',
-    'quantity' => 'количество',
+    'quantity' => 'кол-во',
     'blocked_forever' => 'Заблокирован навсегда',
     'user.congrats' => 'Поздравления пользователя',
     'moderation.update' => 'Обновить',
