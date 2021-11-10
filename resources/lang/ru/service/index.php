@@ -52,7 +52,7 @@ return [
     'banners' => 'Создать рекламу',
     'change_password' => 'Изменить пароль',
     'reset_password' => 'Сбросить пароль',
-    'create_review_title' => 'НАПИСАТЬ :title ОТЗЫВ',
+    'create_review_title' => 'НАПИСАТЬ ОТЗЫВ О :title',
     'edit_review_title' => 'ИЗМЕНИТЬ ОТЗЫВ О :title',
     'review_rating_title' => 'Рейтинг',
     'review_person_name_label' => 'Имя человека',

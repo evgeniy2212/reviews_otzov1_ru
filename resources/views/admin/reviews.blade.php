@@ -12,7 +12,7 @@
                     <div class="adminFilterItem">
                         <div>
                             {{--<label>--}}
-                            {!! strtoupper(\App\Services\DataService::getFilterLang($filterName)) !!}
+                            {!! \Illuminate\Support\Str::upper(\App\Services\DataService::getFilterLang($filterName)) !!}
                             {{--</label>--}}
                         </div>
                         <div>

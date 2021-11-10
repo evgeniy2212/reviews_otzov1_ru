@@ -8,7 +8,7 @@
                     <div class="col-md-4 d-flex flex-row justify-content-around">
                         <div>
                             {{--<label for="bannerFilter">--}}
-                            {!! strtoupper(\App\Services\DataService::getFilterLang($filterName)) !!}
+                            {!! \Illuminate\Support\Str::upper(\App\Services\DataService::getFilterLang($filterName)) !!}
                             {{--</label>--}}
                         </div>
                         <div>

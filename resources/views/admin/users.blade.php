@@ -36,11 +36,11 @@
                        id="searchCategory"
                        type="text"
                        name="search"
-                       placeholder="Search"
+                       placeholder="{{ __('service/index.search') }}"
                        aria-label="Search"
                        value="{{ isset($search) ? $search : '' }}"
                        required>
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Go</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">{{ __('service/index.search') }}</button>
             </form>
         </div>
         @forelse($users as $user)

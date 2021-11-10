@@ -183,7 +183,7 @@ class ReviewCharacteristicsSeeder extends Seeder
                  ], 'is_positive' => true, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Daring',
-                     'ru' => 'Дерзкий',
+                     'ru' => 'Смелый',
                  ], 'is_positive' => true, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Energetic',
@@ -243,11 +243,11 @@ class ReviewCharacteristicsSeeder extends Seeder
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Discriminatory',
-                     'ru' => 'Дискриминационный',
+                     'ru' => 'Ущемляющий',
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Demanding',
-                     'ru' => 'Требовательный',
+                     'ru' => 'Придирчивый',
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Disengaged',
@@ -255,7 +255,7 @@ class ReviewCharacteristicsSeeder extends Seeder
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Disrespectful',
-                     'ru' => 'Неуважительный',
+                     'ru' => 'Дерзкий',
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Messy',
@@ -263,7 +263,7 @@ class ReviewCharacteristicsSeeder extends Seeder
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Micromanaging',
-                     'ru' => 'Контролирующий',
+                     'ru' => 'Надзирающий',
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Inflexible',
@@ -299,11 +299,11 @@ class ReviewCharacteristicsSeeder extends Seeder
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Unrewarding',
-                     'ru' => 'Неблагодарный',
+                     'ru' => 'Пахабный',
                  ], 'is_positive' => false, 'is_published' => true,],
                  ['name' =>  [
                      'en' => 'Unsupportive',
-                     'ru' => 'Неподдерживающий',
+                     'ru' => 'Безучастный',
                  ], 'is_positive' => false, 'is_published' => true,],
              ],
              'goods' => [

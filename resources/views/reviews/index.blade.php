@@ -9,7 +9,7 @@
         <div class="content-place">
             <div class="create-review-button">
                 <span>
-                    {{ strtoupper(__('service/index.reviews.write_new')) }}
+                    {{ \Illuminate\Support\Str::upper(__('service/index.reviews.write_new')) }}
                 </span>
                 <div class="col-sm-4 col-md-3 col-lg-2">
                     @guest()
