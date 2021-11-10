@@ -4,7 +4,7 @@
     <div class="profile-review-place">
         <div class="profile-congratulation-filters">
             @foreach($filters as $filter)
-                <div class="col-md-3 d-sm-flex justify-content-around">
+                <div class="col-md-4 d-sm-flex justify-content-around">
                     <div>
                         <label for="country">
                             {!! $filter->format_name !!}

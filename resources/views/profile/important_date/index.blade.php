@@ -5,7 +5,7 @@
         @include('profile.important_date.add_important_date')
         <div class="profile-important-date-filters">
             @foreach($filters as $filter)
-                <div class="col-md-3 mb-3 mb-sm-0 d-sm-flex justify-content-around">
+                <div class="col-md-4 mb-3 mb-sm-0 d-sm-flex justify-content-around">
                     <div>
                         <label for="country">
                             {!! $filter->format_name !!}

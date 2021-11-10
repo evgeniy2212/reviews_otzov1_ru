@@ -187,6 +187,12 @@
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
+
+@media screen and (min-width: 768px) {
+    .singleBannerImageContent .bannerImagePreview {
+        max-width: 164px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .singleBannerInfo {
         -webkit-box-pack: center;
@@ -249,7 +255,7 @@
     }
 }
 .singleBannerControl, .singleUserControl {
-    width: 15%;
+    width: 35%;
     padding: 0 1%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -271,7 +277,7 @@
 }
 @media screen and (max-width: 767px) {
     .singleUserControl {
-        width: 25%;
+        width: 48%;
     }
     .singleBannerControl {
         width: 50%;
@@ -306,8 +312,8 @@
         flex-direction: row;
     }
     .singleUserControl .otherButton {
-        width: calc(33.33% - 10px);
-        margin: 0 5px 0;
+        width: calc(100% - 10px);
+        margin: 0 5px 10px;
     }
     .singleUserControl .otherButton:last-child {
         margin-top: 0;
@@ -315,10 +321,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .singleUserControl .otherButton {
-        width: calc(100% - 10px);
-        margin-bottom: 10px;
-    }
     .singleUserInfo {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -365,6 +367,11 @@
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
+
+.adminFilters .search-form {
+    flex-wrap: nowrap;
+}
+
 @media screen and (max-width: 767px) {
     .adminFilters {
         -ms-flex-wrap: wrap;
@@ -421,12 +428,12 @@
     border-width: 1px;
     border-radius: 1px;
     max-height: 20px;
-    padding: 0 0;
+    padding: 0 5px;
     text-align: center;
     -moz-text-align-last: center;
     text-align-last: center;
     background: #e7e6e6;
-    width: 45px;
+    /*width: 45px;*/
     color: #1b1e21;
     font-size: 0.8rem;
     font-weight: 500;

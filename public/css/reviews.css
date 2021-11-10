@@ -234,6 +234,8 @@ input[type="file"] {
     -ms-flex-pack: start;
     justify-content: flex-start;
     padding-top: 5px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .checkbox-item {
@@ -280,10 +282,6 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1680px) and (max-height: 800px) {
-    .review-content-place {
-        height: auto;
-        padding-bottom: 8px;
-    }
     footer.footer {
         height: 45px;
     }
@@ -294,7 +292,14 @@ input[type="file"] {
         padding-bottom: 5px;
         padding-top: 5px;
     }
-
+}
+@media screen and (max-height: 800px) {
+    .review-content-place {
+        height: auto;
+    }
+    .content-place:not(.home-content-place) {
+        padding-bottom: 8px;
+    }
 }
 @media screen and (max-width: 1024px) {
     .review-content-place, .review-content-place:hover {
@@ -306,27 +311,6 @@ input[type="file"] {
         height: auto;
     }
 }
-/*@media screen and (max-height: 800px) {*/
-/*    .review-content-place {*/
-/*        height: auto;*/
-/*        padding-top: 10px;*/
-/*        padding-bottom: 10px;*/
-/*    }*/
-/*    footer.footer {*/
-/*        height: 45px;*/
-/*    }*/
-
-/*    .review-info-container {*/
-/*        padding-bottom: 10px;*/
-/*    }*/
-/*    .review-content-place {*/
-/*        padding-top: 5px;*/
-/*    }*/
-/*    .create-review-name {*/
-/*        padding-top: 5px;*/
-/*        padding-bottom:0px;*/
-/*    }*/
-/*}*/
 .createReviewButton {
     max-height: 20px;
 }
@@ -356,6 +340,7 @@ input[type="file"] {
     -ms-flex-pack: center;
     justify-content: center;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 .review-filters {
     display: -webkit-box;
@@ -896,6 +881,10 @@ input[type="file"] {
     display: none;
     min-height: 100px;
 }
+
+.review-textarea .otherButton {
+    height: auto;
+}
 @media screen and (max-width: 767px) {
     .review-textarea [class^="col-"] {
         padding-left: 0;
@@ -977,7 +966,7 @@ input:-webkit-autofill:active  {
     display: inline-block;
     padding: 0 2px;
     line-height: 15px;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     border: 1px solid #2f5496;
     margin: 0;
     text-align: center;

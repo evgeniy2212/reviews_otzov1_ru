@@ -5,7 +5,7 @@
                 @lang('service/profile.congratulation.create.category')
             </span>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-md-6">
             <select class="select"
                     id="selectCategoryCongrats"
                     name="congratulation_category_id"
@@ -23,7 +23,7 @@
                 @lang('service/profile.congratulation.create.status')
             </span>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-md-6">
             <select class="select"
                     id="selectCongratulationStatus"
                     name="is_private"

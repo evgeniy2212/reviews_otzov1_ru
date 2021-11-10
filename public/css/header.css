@@ -146,6 +146,11 @@
 .first-menu-showing{
     font-size: 1.1rem;
 }
+@media screen and (max-width: 767px) {
+    .first-menu-showing{
+        font-size: 0.95rem;
+    }
+}
 .nav-first-menu-showing{
     background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #ececec), color-stop(50%, #D4D5D5), color-stop(80%, #ececec))!important;
     background: -o-linear-gradient(bottom, #ececec 20%, #D4D5D5 50%, #ececec 80%)!important;
@@ -197,6 +202,12 @@
     letter-spacing: 1px;
     outline: none;
     text-decoration: none;
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .nav-menu a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 @media screen and (max-width: 767px){
     .nav-menu a {
@@ -351,13 +362,14 @@ body.mobile-nav-active #mobile-nav {
 }
 
 .search-form button {
-    width: 45px;
+    /*width: 45px;*/
+    width: auto;
     border-color: #a0a3af;
     border-style: dashed;
     border-width: 1px;
     border-radius: 1px;
     max-height: 20px;
-    padding: 0;
+    padding: 0 3px;
     text-align: center;
     -moz-text-align-last: center;
     text-align-last: center;
@@ -460,7 +472,7 @@ body.mobile-nav-active #mobile-nav {
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
-        padding-right: 20px;
+        padding-right: 15px;
     }
 }
 
@@ -488,6 +500,44 @@ body.mobile-nav-active #mobile-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+@media screen and (max-width: 767px) {
+    .header .nav-menu {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.search-form__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    .search-form__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .form-inline .search-form__inner .input {
+        margin-bottom: 5px;
+    }
+    .middleHeadContainer__logo {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .search-form__inner {
+        width: 100%;
+    }
+    .search-form__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }
 
 .navbar-nav,

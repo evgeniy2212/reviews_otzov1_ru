@@ -170,7 +170,7 @@
                             </div>
                         </div>
                 @endauth
-                <div class="col-md-5 offset-md-7 col-lg-4 offset-lg-8">
+                <div class="col-md-5 offset-md-7">
                     <button class="otherButton" style="white-space: nowrap"
                             id="commentButton-{{ $review->id }}"
                             data-close="{!! __('service/index.close') !!}"
@@ -179,7 +179,7 @@
                         @lang('service/index.reviews.show_comments') ({!! $review->comments->count() !!})
                     </button>
                 </div>
-                <div class="col-md-5 offset-md-7 col-lg-4 offset-lg-8">
+                <div class="col-md-5 offset-md-7">
                     @auth()
 {{--                        @if(auth()->user()->id !== $review->user_id)--}}
                             <a type="button"

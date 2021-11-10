@@ -99,7 +99,7 @@
                             </span>
                             <div class="checkbox-container">
                                 @foreach($positiveCharacteristics as $characteristics)
-                                    <div class="col-md-6 checkbox-items">
+                                    <div class="col-lg-6 checkbox-items">
                                         @foreach($characteristics as $characteristic)
                                             <div class="checkbox-item">
                                                 <input type="checkbox"
@@ -176,7 +176,7 @@
                             </span>
                             <div class="checkbox-container">
                                 @foreach($negativeCharacteristics as $characteristics)
-                                    <div class="col-md-6 checkbox-items">
+                                    <div class="col-lg-6 checkbox-items">
                                         @foreach($characteristics as $characteristic)
                                             <div class="checkbox-item">
                                                 <input type="checkbox"
@@ -229,7 +229,7 @@
                                 @lang('service/index.save')
                             </button>
                         </div>
-                        <div class="col-md-3 col-lg-2 mb-2 mb-md-0">
+                        <div class="col-md-4 col-lg-3 mb-2 mb-md-0">
                             <button type="submit"
                                     class="createReviewButton loginButton submitReviewButton"
                                     data-action="{{ route('presaving-review') }}"

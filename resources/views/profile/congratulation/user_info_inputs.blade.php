@@ -36,7 +36,7 @@
                 @lang('register.country')
             </span>
         </div>
-        <div class="col-12 col-sm-3">
+        <div class="col-12 col-md-3">
             <select class="select"
                     id="selectCountry"
                     name="country_id"
@@ -54,7 +54,7 @@
                 {{ empty($congratulation) ? __('register.state') : $congratulation->region->region_naming }}
             </span>
         </div>
-        <div class="col-12 col-sm-3 mb-2 mb-sm-0">
+        <div class="col-12 col-md-3 mb-2 mb-md-0">
             <select class="select"
                     id="selectRegion"
                     name="region_id"
@@ -67,7 +67,7 @@
                 <option value="3">@lang('service/index.vacations')</option>
             </select>
         </div>
-        <div class="col-12 col-sm-3">
+        <div class="col-12 col-md-3">
             <input id="city"
                    type="text"
                    class="form-control input"
