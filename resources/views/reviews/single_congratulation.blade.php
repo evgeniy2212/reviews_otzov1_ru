@@ -25,7 +25,7 @@
             <p>
                 <span class="single-review-holder">
                   @if($review->video)
-                      <video class="videoPreview" controls>
+                      <video class="videoPreview" style="object-fit: cover" controls>
                           <source src="{{ $review->video->getVideoUrl() }}" type="video/mp4">
                           <source src="movie.ogg" type="video/ogg">
                           Your browser does not support the video tag.
