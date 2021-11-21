@@ -6,6 +6,7 @@ namespace App\Services;
 use App\Http\Requests\Profile\SaveCongratulationRequest;
 use App\Http\Requests\SaveReviewRequest;
 use App\Models\Review;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -38,25 +39,29 @@ class VideoService {
 
     /**
      * @param SaveCongratulationRequest|SaveReviewRequest|Request $request
-     * @param $review
-     * @param string $path
+     * @param Model $review
      *
      * @return array
      */
-    public static function updateImage($request, Review $review, $path = 'reviews'){
+    public static function updateVideo($request, Model $review){
         $videoInfo = self::uploadVideo($request);
         if($review->video){
-            $filePath = 'videos/upload_videos/' . $path . DIRECTORY_SEPARATOR . $review->video->name;
-            $is_exist = Storage::disk('public')->exists($filePath);
-            if($is_exist){
-                Storage::disk('public')->delete($filePath);
-//                $resizeFilePath = 'images/resize_images/reviews/' . $review->image->name;
-//                if(Storage::disk('public')->delete($resizeFilePath)){
-//                    Storage::disk('public')->delete($resizeFilePath);
-//                }
-            }
+            self::deleteVideo($review);
         }
 
         return $videoInfo;
+    }
+
+    /**
+     * @param string $path
+     * @param Model $review
+     */
+    public static function deleteVideo(Model $item, string $path = 'reviews'){
+        $filePath = 'videos/upload_videos/' . $path . DIRECTORY_SEPARATOR . optional($item->video)->name;
+        $is_exist = Storage::disk('public')->exists($filePath);
+        if($is_exist && $item->video){
+            Storage::disk('public')->delete($filePath);
+            $item->video->delete();
+        }
     }
 }

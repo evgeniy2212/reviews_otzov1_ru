@@ -219,7 +219,7 @@
           $('#selectGroup').removeClass("invalid-selector");
         }
 
-        if ($('#review-create-text').val().length <= 1 && $('input:checkbox:checked').length <= 0) {
+        if (typeof $('#review-create-text').val() !== 'undefined' && $('#review-create-text').val().length <= 1 && $('input:checkbox:checked').length <= 0) {
           $('#review-create-text').addClass('invalid-textarea');
           $('#emptyReviewNotificationModal').modal('show');
           event.preventDefault();
@@ -247,13 +247,10 @@
       }
 
       if ($('#createReviewForm #video, #editReviewForm #video').prop('files')[0] && form.hasClass('valid-form')) {
-        $('.custom-file-upload').hide();
-        $('#inTurnFadingTextG').show(); // $('button[type=submit]').prop('disabled', true);
+        $('.custom-file-upload, .delete-button').hide();
+        $('#inTurnFadingTextG').show();
       }
-    }); // $('.slider__item').click(function(){
-    //     $('#addPostRedirect').modal('show');
-    // });
-
+    });
     $('#acceptModal').click(function () {
       $('#submitFormAccept').val(1);
       $('#acceptFormModal').modal('hide');

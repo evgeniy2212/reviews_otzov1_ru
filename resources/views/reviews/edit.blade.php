@@ -29,6 +29,14 @@
                id="submitFormAccept"
                data-enable-low-rating="{{ $review->category->enable_low_rating ? 1 : 0 }}"
                value="1">
+        <input type="hidden"
+               name="deletePhotoFlag"
+               id="deletePhotoFlag"
+               value="0">
+        <input type="hidden"
+               name="deleteVideoFlag"
+               id="deleteVideoFlag"
+               value="0">
         <div class="container">
                 <div class="review-content-place">
                     <div class="d-flex justify-content-center">
@@ -140,7 +148,7 @@
                                 <textarea name="review"
                                           class="form-control"
                                           type="text"
-                                          id="review-text"
+                                          id="review-create-text"
                                           required
                                           placeholder="{{ empty($review->review) ? __('service/index.review_text_placeholder') : '' }}">{!! $review->review !!}</textarea>
                                 <div class="review-upload-files">
@@ -149,16 +157,26 @@
                                         <input type="file"
                                                id="img"
                                                name="img"
+                                               data-text="{!! __('service/index.add_photo') !!}"
                                                accept="image/*"/>
-                                        <i class="fa fa-cloud-upload"></i> <span>{!! empty($review->image) ? __('service/index.add_photo') : $review->image->original_name !!}</span>
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <span>{!! empty($review->image) ? __('service/index.add_photo') : $review->image->original_name !!}</span>
                                     </label>
+                                    <button class="delete-button" type="button" id="deleteImg">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
                                     <label class="custom-file-upload">
                                         <input type="file"
                                                name="video"
+                                               data-text="{!! __('service/index.add_video') !!}"
                                                id="video"
                                                accept="video/*"/>
-                                        <i class="fa fa-cloud-upload"></i> <span>{!! empty($review->video) ? __('service/index.add_video') : $review->video->original_name !!}</span>
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <span>{!! empty($review->video) ? __('service/index.add_video') : $review->video->original_name !!}</span>
                                     </label>
+                                    <button class="delete-button" type="button" id="deleteVideo">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -83,13 +83,20 @@ class ReviewController extends Controller
         );
         $review->update($request->all());
         $review->characteristics()->sync($request->characteristics);
+
+        if($request->get('deletePhotoFlag')){
+            ImageService::deleteImage($review);
+        }
         if($request->has('img')){
             $imageInfo = ImageService::updateImage($request, $review);
             ReviewImage::updateOrCreate(['review_id' => $review->id], $imageInfo);
         }
 
+        if($request->get('deleteVideoFlag')){
+            VideoService::deleteVideo($review);
+        }
         if($request->has('video')){
-            $videoInfo = VideoService::uploadVideo($request);
+            $videoInfo = VideoService::updateVideo($request, $review);
             ReviewVideo::updateOrCreate(['review_id' => $review->id], $videoInfo);
         }
         $slug = $review->category->slug;
@@ -109,7 +116,7 @@ class ReviewController extends Controller
             ReviewImage::updateOrCreate(['review_id' => $review->id], $imageInfo);
         }
         if($request->has('video')){
-            $videoInfo = VideoService::uploadVideo($request);
+            $videoInfo = VideoService::updateVideo($request, $review);
             ReviewVideo::updateOrCreate(['review_id' => $review->id], $videoInfo);
         }
 
