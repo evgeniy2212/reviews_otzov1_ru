@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="profile-single-review-item">
-        <div class="w-100 d-flex">
+        <div class="w-100 d-flex flex-wrap flex-md-nowrap justify-content-center">
             <div class="adminSingleReviewContent">
                 <div class="single-review-name">
                     <div class="single-review-logo-name">
@@ -159,8 +159,8 @@
                     </div>
                 </div>
             </div>
-            <div class="review-textarea" data-review-id="{{ $review->id }}">
-                <div class="col-12 col-md-9">
+            <div class="review-textarea flex-wrap flex-md-nowrap" data-review-id="{{ $review->id }}">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
                         <textarea name="review"
                                   type="text"
                                   id="review-text"

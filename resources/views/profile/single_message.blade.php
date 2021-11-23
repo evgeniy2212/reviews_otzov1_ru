@@ -95,7 +95,7 @@
                     <span class="sender-name"></span>
                     <span class="message-response"></span>
                 </div>
-            <div class="review-textarea flex-wrap" data-review-id="{{ $review->id }}">
+            <div class="review-textarea flex-wrap flex-md-nowrap" data-review-id="{{ $review->id }}">
                 <div class="col-md-9 mb-2 mb-md-0">
                         <textarea name="review"
                                   type="text"

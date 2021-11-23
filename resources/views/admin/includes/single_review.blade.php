@@ -194,7 +194,7 @@
                     </div>
                 </div>
             </div>
-            <div class="review-textarea flex-wrap" data-review-id="{{ $review->id }}">
+            <div class="review-textarea flex-wrap flex-md-nowrap" data-review-id="{{ $review->id }}">
                 <div class="col-12 col-md-9 mb-3 mb-md-0">
                         <textarea name="review"
                                   type="text"
