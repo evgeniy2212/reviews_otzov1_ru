@@ -887,8 +887,8 @@ input[type="file"] {
 }
 @media screen and (max-width: 767px) {
     .review-textarea [class^="col-"] {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 .review-textarea[style*='display: block'], .comment[style*='display: block'] {
