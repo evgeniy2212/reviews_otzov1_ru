@@ -218,10 +218,6 @@
 .profile-single-congratulation .congratulation-category {
     text-align: left;
     text-shadow: 1px 1px 5px #2f5496;
-    float: left;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
     font-family: "ImprintMTShadow";
     font-weight: 500;
     font-size: 1rem;
