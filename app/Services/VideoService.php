@@ -40,11 +40,12 @@ class VideoService {
     /**
      * @param SaveCongratulationRequest|SaveReviewRequest|Request $request
      * @param Model $review
+     * @param string $path
      *
      * @return array
      */
-    public static function updateVideo($request, Model $review){
-        $videoInfo = self::uploadVideo($request);
+    public static function updateVideo($request, Model $review, string $path = 'reviews'){
+        $videoInfo = self::uploadVideo($request, $path);
         if($review->video){
             self::deleteVideo($review);
         }

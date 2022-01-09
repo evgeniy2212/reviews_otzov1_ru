@@ -46,11 +46,12 @@ class ImageService {
     /**
      * @param SaveCongratulationRequest|SaveReviewRequest|Request $request
      * @param $item
+     * @param string $path
      *
      * @return array
      */
-    public static function updateImage($request, $item){
-        $imageInfo = self::uploadImage($request);
+    public static function updateImage($request, $item, string $path = 'reviews'){
+        $imageInfo = self::uploadImage($request, $path);
         if($item->image){
             self::deleteImage($item);
         }
@@ -64,7 +65,6 @@ class ImageService {
      */
     public static function deleteImage(Model $item, string $path = 'reviews')
     {
-
         $filePath = self::UPLOAD_PATH . $path . DIRECTORY_SEPARATOR . optional($item->image)->name;
         $is_exist = Storage::disk('public')->exists($filePath);
         if($is_exist && $item->image){

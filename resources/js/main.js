@@ -54,7 +54,7 @@
         });
         $('#selectGroup').change(function(){
             let selectedText = $("#selectGroup option:selected").text();
-            if(selectedText.toLowerCase() == 'other'){
+            if(selectedText.toLowerCase() == 'другое'){
                 let textReviewHeight = $('.text-review-creating-container').parent().height();
                 let groupCreatingHeight = $('.new-group-creating-container').height();
                 let newTextHeight = textReviewHeight - groupCreatingHeight;
@@ -123,10 +123,11 @@
                     $('#review-create-text').removeClass('invalid-textarea');
                 }
 
-                if($("#selectGroup").is(":visible")){
-                    if($("#selectGroup option:selected").text().toLowerCase() == 'other'){
+                if($("#new_group").is(":visible")){
+                    if($("#selectGroup option:selected").text().toLowerCase() == 'другое'){
                         if($('#new_group').val().length <= 0){
                             $('#new_group').addClass('invalid-input');
+                            event.preventDefault();
                         } else {
                             $('#new_group').removeClass('invalid-input');
                         }

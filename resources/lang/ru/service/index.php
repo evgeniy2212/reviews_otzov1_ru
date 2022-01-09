@@ -114,6 +114,7 @@ return [
     'edit_contacts' => 'Править контакты',
     'edit_profile' => 'Править профиль',
     'edit' => 'Править',
+    'new_group_name' => 'НОВАЯ ГРУППА:',
     'region' => 'Регион',
     'all_rights_reserved' => 'Все права защищены',
     'contacts' => 'Контакты',

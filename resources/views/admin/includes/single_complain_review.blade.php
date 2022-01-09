@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="profile-single-review-item">
-        <div class="w-100 d-flex">
+        <div class="w-100 d-flex flex-wrap flex-md-nowrap justify-content-center">
             <div class="adminSingleReviewContent">
                 <div class="single-review-name">
                     <div>

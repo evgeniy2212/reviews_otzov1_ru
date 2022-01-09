@@ -126,6 +126,7 @@ return [
     'edit_profile' => 'Edit Profile',
     'edit_contacts' => 'Edit Contacts',
     'edit' => 'Edit',
+    'new_group_name' => 'NEW GROUP NAME:',
     'cancel' => 'Cancel',
     'month' => 'Month',
     'menu' => 'Menu',

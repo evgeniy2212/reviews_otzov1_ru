@@ -451,6 +451,23 @@
       $("#video").parent().find('span').text(text);
       $("#deleteVideoFlag").val('1');
     });
+    $("#deleteCongratImg").click(function (e) {
+      // e.preventDefault();
+      $("#imgCongratulation").val();
+      var text = $(this).data('default-description');
+      $("#imgCongratulation").parent().find('span').text(text);
+      $("#deletePhotoFlag").val('1');
+      $('#blah').attr("src", $(this).data('default-src'));
+      $('#imgDefaultCongratulationValue').val('');
+    });
+    $("#deleteCongratVideo").click(function (e) {
+      e.preventDefault();
+      $("#videoCongratulation").val();
+      var text = $("#videoCongratulation").data('default-description');
+      $("#videoCongratulation").parent().find('span').text(text);
+      $("#deleteVideoFlag").val('1');
+      $('.videoContainer').html('<img src="' + $(this).data('default-src') + '" ' + 'alt="video" class="videoPreview">');
+    });
   });
 })(jQuery);
 

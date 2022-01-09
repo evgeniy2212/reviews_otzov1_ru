@@ -43,10 +43,13 @@ class ReviewModerationController extends Controller
                 ->update([
                     'is_new' => 0
                 ]);
-            GroupByReview::findOrFail($review->review_group_id)
-                ->update([
-                    'is_published' => true
-                ]);
+            $groupByReview = GroupByReview::findOrFail($review->review_group_id);
+            $groupByReview->is_published = true;
+            if($request->get('new_name')){
+                $groupByReview->translate(app('laravellocalization')->getCurrentLocale())
+                    ->name = $request->get('new_name');
+            }
+            $groupByReview->save();
         } else {
             ReviewModeration::whereReviewId($review->id)
                 ->update([
@@ -57,10 +60,6 @@ class ReviewModerationController extends Controller
                     'is_published' => false
                 ]);
         }
-//        dd($request->update);
-//        Complain::whereReviewId($review->id)->update(['is_new' => 0]);
-//        $request->merge(['is_published' => $request->is_blocked ? 0 : 1]);
-//        $review->update($request->all());
 
         return redirect()->back()->withSuccess([__('service/admin.review_updated_successfully')]);
     }

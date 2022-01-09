@@ -185,16 +185,11 @@
             </div>
         </div>
         <div class="post">
-            <div class="slider">
-                <div class="slider__wrapper">
-                    {{--<div class="slider__item">--}}
-                    {{--<div style="height: 120px; background: url(../images/post.jpg) 100% 100% no-repeat; background-size: cover;">1</div>--}}
-                    {{--<div style="height: 120px; background-image: url(../images/post.jpg); background-repeat: no-repeat; background-size: cover;">1</div>--}}
-                    {{--</div>--}}
-
+            <div class="swiper js-main-slider">
+                <div class="swiper-wrapper">
                     @foreach(\App\Services\BannerService::getHeadBanners() as $key => $banner)
                         @if(empty(optional($banner)->body))
-                            <div class="slider__item">
+                            <div class="swiper-slide">
 
                                 @if(empty($banner->link))
                                     <div class="slider_content" style="height: 150px; background-position: center top; background-image: url('{{ $banner->getImageUrl() }}'); background-size: auto {{ empty($banner->title) ? '150' : '130' }}px;">
@@ -207,7 +202,7 @@
                                 @endif
                             </div>
                         @else
-                            <div class="slider__item"
+                            <div class="swiper-slide"
                                  id="slider_body{{ $key }}"
                                  data-body="{{ $banner->body }}">
                                 <div style="height: 150px;
@@ -221,12 +216,9 @@
                             </div>
                         @endif
                     @endforeach
-                    {{--<div class="slider__item">--}}
-                    {{--<div style="height: 120px; background: url(../images/post.jpg) 100% 100% no-repeat; background-size: cover;">2</div>--}}
-                    {{--</div>--}}
                 </div>
-                <a class="slider__control slider__control_left" href="#" role="button"></a>
-                <a class="slider__control slider__control_right" href="#" role="button"></a>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
