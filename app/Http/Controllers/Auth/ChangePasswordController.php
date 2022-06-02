@@ -36,6 +36,6 @@ class ChangePasswordController extends Controller
         $user->save();
 
 //        return redirect()->back()->with("status","Password changed successfully !");
-        return redirect()->route('profile-info')->with('status','Password changed successfully!');
+        return redirect()->route('profile-info')->with('status','Пароль успешно изменён!');
     }
 }

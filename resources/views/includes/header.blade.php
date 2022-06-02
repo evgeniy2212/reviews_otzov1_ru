@@ -3,7 +3,7 @@
         <div class="header__logo">
             <img src="{{ asset('images/frame.png') }}" height="125px" width="150px"/>
             <div class="d-flex d-sm-none flex-column justify-content-start site-name site-name--mobile">
-                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="site-name__link">@lang('service/index.header_site_name')<span>.com</span></a>
+                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="site-name__link">@lang('service/index.header_site_name')<span></span></a>
                 <p>
                     @lang('service/index.header.tagline')
                 </p>

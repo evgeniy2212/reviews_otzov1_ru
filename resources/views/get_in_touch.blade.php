@@ -69,6 +69,7 @@
                                        type="email"
                                        class="form-control input"
                                        name="email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                        value="{{ old('email') }}"
                                        required
                                        autocomplete="email">
@@ -82,7 +83,8 @@
                             </div>
                             <div>
                                 <input id="phone"
-                                       type="text"
+                                       type="tel"
+                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                        class="form-control input"
                                        name="phone"
                                        required

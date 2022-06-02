@@ -11,7 +11,7 @@
                             {{ __('auth.fresh_verify_link') }}
                         </div>
                     @endif
-                        {{ __('auth.check_verify_link') }}
+                        {!! __('auth.check_verify_link') !!}
                 </div>
                 <div class="form-group verifyRegisterControl">
                     <div class="col-md-3">

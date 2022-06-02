@@ -76,7 +76,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data,
+        $niceNames = array(
+            'zip_code' => __('register.zip_code')
+        );
+        $validator = Validator::make($data,
             [
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -90,10 +93,12 @@ class RegisterController extends Controller
                 'nickname' => ['nullable', 'string', 'max:255'],
                 'city' => ['required', 'string', 'max:255'],
                 'region' => ['required', 'integer', 'max:999999999'],
-                'zip_code' => ['required', 'numeric', 'digits:5'],
+                'zip_code' => ['required', 'numeric', 'digits:6'],
                 'g-recaptcha-response' => ['required', 'captcha']
             ]
         );
+        $validator->setAttributeNames($niceNames);
+        return $validator;
     }
 
     /**
