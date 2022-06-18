@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Services\ReviewService;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Review extends Model
 {
@@ -104,10 +105,12 @@ class Review extends Model
         return $this->hasOne(ReviewVideo::class, 'review_id', 'id');
     }
 
-    public function complains()
+    /**
+     * @return MorphMany
+     */
+    public function complains(): MorphMany
     {
-        return $this->belongsToMany(User::class, 'complains')
-            ->withPivot('msg', 'is_new');
+        return $this->morphMany(Complain::class, 'model');
     }
 
     public function moderationReviews()

@@ -53,6 +53,39 @@
                 @endif
                     {!! $review->body !!}
             </p>
+            <div class="w-100">
+                <div class="col-md-5 offset-md-7 col-lg-4 offset-lg-8">
+                    @auth()
+                        <a type="button"
+                           href=""
+                           data-toggle="modal"
+                           class="otherButton" style="white-space: nowrap; margin-top: 10px; text-decoration: none; color: #1b1e21;"
+                           id="complainButton-{{ $review->id }}"
+                           data-review-model-id="{{ $review->id }}"
+                           data-review-model-type="{{ get_class($review) }}"
+                           data-tooltip="{{ __('service/index.complain_message') }}"
+                           data-target="#complainModal">@lang('service/index.complain')</a>
+                    @else
+                        <a type="button"
+                           href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/register') }}"
+                           class="otherButton"
+                           style="white-space: nowrap; margin-top: 10px; text-decoration: none; color: #1b1e21;"
+                           data-tooltip="{{ __('service/index.complain_message') }}"
+                           id="complainButton-{{ $review->id }}">@lang('service/index.complain')</a>
+                    @endauth
+                </div>
+                <div class="col-md-5 offset-md-7 col-lg-4 offset-lg-8">
+                    @auth()
+                        <a type="button"
+                           href="{{ Request::url() === route('show-congratulation', [$review->id]) ? url()->previous() : route('show-congratulation', [$review->id]) }}"
+                           class="otherButton"
+                           style="white-space: nowrap; margin-top: 10px; text-decoration: none; color: #1b1e21;"
+                           id="showButton-{{ $review->id }}">
+                            {{ Request::url() === route('show-congratulation', [$review->id]) ? __('service/index.close') : __('service/index.open') }}
+                        </a>
+                    @endauth
+                </div>
+            </div>
         </div>
     </div>
 </div>

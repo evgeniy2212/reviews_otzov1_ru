@@ -1,7 +1,13 @@
 @extends('profile.index')
-
+@section('modal_forms')
+    @include('includes.modal.errorBadWords')
+@endsection
 @section('profile_review_content')
-    <form method="POST" action="{{ route('profile-congratulations.update', $congratulation->id) }}" enctype="multipart/form-data" novalidate="" id="congratulationForm">
+    <form method="POST"
+          action="{{ route('profile-congratulations.update', $congratulation->id) }}"
+          enctype="multipart/form-data"
+          novalidate=""
+          id="congratulationForm">
         @method('PATCH')
         @csrf
         <input type="hidden"

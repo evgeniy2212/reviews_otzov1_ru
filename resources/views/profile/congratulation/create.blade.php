@@ -1,7 +1,12 @@
 @extends('profile.index')
-
+@section('modal_forms')
+    @include('includes.modal.errorBadWords')
+@endsection
 @section('profile_review_content')
-    <form method="POST" action="{{ route('profile-congratulations.store') }}" enctype="multipart/form-data" novalidate="" id="congratulationForm">
+    <form method="POST" action="{{ route('profile-congratulations.store') }}"
+          enctype="multipart/form-data"
+          novalidate=""
+          id="congratulationForm">
         @csrf
         <div class="congratulationTitle">
             <span>@lang('service/profile.congratulation.create.title')</span>
@@ -17,6 +22,7 @@
                 <textarea name="body"
                           class="form-control"
                           type="text"
+                          id="review-create-text"
                           required
                           placeholder="@lang('service/index.review_text_placeholder')"></textarea>
                 <div class="congratulationContentUpload">

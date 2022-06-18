@@ -135,7 +135,7 @@
             @foreach($review->complains as $complain)
                 <div class="complain" style="display: none">
                     <span>{!! $complain->full_name !!}</span>
-                    <span>{!! $complain->pivot->msg !!}</span>
+                    <span>{!! $complain->msg !!}</span>
                 </div>
             @endforeach
             @foreach($review->comments as $comment)

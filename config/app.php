@@ -168,6 +168,7 @@ return [
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Onecentlin\Adminer\ServiceProvider::class,
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,7 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Share' => Jorenvh\Share\ShareFacade::class,
     ],
 
 ];

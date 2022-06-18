@@ -77,7 +77,7 @@
                                  class="previewImage">
                           @endif
                         </span>
-                        @if($review->characteristics->isNotEmpty())
+                        @if(optional($review->characteristics)->isNotEmpty())
                             {{ $review->characteristics->pluck('name')->implode(', ') }}
                         @endif
                         {{ $review->review }}
@@ -88,30 +88,43 @@
                     @method('PATCH')
                     @csrf
                     @if($review->complains->where('pivot.is_new', 1)->count())
-                        <form method="POST" action="{{ route('admin.update_complain_review', ['review' => $review->id]) }}" enctype="multipart/form-data" novalidate="" id="adminReviewForm{{ $review->id }}Block" style="width: 100%">
+                        <form method="POST"
+                              action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
+                              enctype="multipart/form-data"
+                              novalidate=""
+                              id="adminReviewForm{{ $review->id }}Block"
+                              style="width: 100%">
                             @method('PATCH')
                             @csrf
                             <button type="submit"
-                                        id="reviewPublishButton{{ $review->id }}"
-                                        class="otherButton"
-                                        name="is_blocked"
-                                        value="0">
+                                    id="reviewPublishButton{{ $review->id }}"
+                                    class="otherButton"
+                                    name="is_blocked"
+                                    value="0">
                                 @lang('service/admin.complain.block')
                             </button>
                         </form>
-                        <form method="POST" action="{{ route('admin.update_complain_review', ['review' => $review->id]) }}" enctype="multipart/form-data" novalidate="" id="adminReviewForm{{ $review->id }}Unblock" style="width: 100%">
+                        <form method="POST" action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
+                              enctype="multipart/form-data"
+                              novalidate=""
+                              id="adminReviewForm{{ $review->id }}Unblock"
+                              style="width: 100%">
                             @method('PATCH')
                             @csrf
                             <button type="submit"
-                                        id="reviewPublishButton{{ $review->id }}"
-                                        class="otherButton"
-                                        name="is_blocked"
-                                        value="1">
+                                    id="reviewPublishButton{{ $review->id }}"
+                                    class="otherButton"
+                                    name="is_blocked"
+                                    value="1">
                                 @lang('service/admin.complain.not_block')
                             </button>
                         </form>
                     @else
-                        <form method="POST" action="{{ route('admin.update_complain_review', ['review' => $review->id]) }}" enctype="multipart/form-data" novalidate="" id="adminReviewForm{{ $review->id }}" style="width: 100%">
+                        <form method="POST" action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
+                              enctype="multipart/form-data"
+                              novalidate=""
+                              id="adminReviewForm{{ $review->id }}"
+                              style="width: 100%">
                             @method('PATCH')
                             @csrf
                             <button type="submit"
@@ -139,8 +152,8 @@
         <div class="w-100 profile-review-item">
             @foreach($review->complains as $complain)
                 <div class="complain" style="display: none">
-                    <span>{!! $complain->full_name !!}</span>
-                    <span>{!! $complain->pivot->msg !!}</span>
+                    <span>{!! $complain->user->full_name !!}</span>
+                    <span>{!! $complain->msg !!}</span>
                 </div>
             @endforeach
         </div>

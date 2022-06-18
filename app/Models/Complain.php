@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Complain extends Model
 {
@@ -22,8 +23,26 @@ class Complain extends Model
     protected $fillable = [
         'id',
         'user_id',
-        'review_id',
+        'model_type',
+        'model_id',
         'msg',
         'is_new'
     ];
+
+
+    /**
+     * @return MorphTo
+     */
+    public function model(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
+    public function user(){
+        return $this->belongsTo(
+            User::class,
+            'user_id',
+            'id'
+        );
+    }
 }

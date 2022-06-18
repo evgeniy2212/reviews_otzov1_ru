@@ -15,7 +15,8 @@ class AddComplainRequest extends FormRequest
     {
         return [
             'msg' => 'required',
-            'review_id' => 'required'
+            'model_id' => 'required',
+            'model_type' => 'required'
         ];
     }
 

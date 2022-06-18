@@ -130,7 +130,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function complains()
     {
-        return $this->belongsToMany(Review::class, 'complains')
+        return $this->belongsToMany(User::class, 'complains')
             ->withPivot('msg', 'is_new');
     }
 

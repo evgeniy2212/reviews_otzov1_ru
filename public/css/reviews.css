@@ -175,6 +175,17 @@ input:-webkit-autofill:active
     border-radius: 1px;
     padding: 10px;
 }
+
+.congratulationContentContainer #review-text,
+.congratulationContentContainer #review-create-text {
+    width: calc(100% - 35%);
+}
+
+.congratulationContentContainer .hwt-container #review-text,
+.congratulationContentContainer .hwt-container #review-create-text {
+    margin-left: 0;
+}
+
 .hwt-container{
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -185,6 +196,14 @@ input:-webkit-autofill:active
 }
 .hwt-highlights{
     padding: 10px;
+}
+
+.congratulationContentContainer .hwt-container {
+    width: calc(100% - 35%);
+    margin-left: 10px;
+}
+.hwt-container #review-text, .hwt-container #review-create-text {
+    width: 100%;
 }
 .hwt-content mark{
     background-color: #ff000057;
@@ -204,8 +223,25 @@ input:-webkit-autofill:active
     .review-upload-files{
         height: auto;
     }
+    .hwt-container {
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 15px;
+    }
+    .congratulationContentContainer #review-text,
+    .congratulationContentContainer #review-create-text {
+        width: 100%;
+        height: auto;
+        margin-left: 3px;
+    }
+    .congratulationContentContainer .hwt-container #review-text,
+    .congratulationContentContainer .hwt-container #review-create-text {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
     #review-text, #review-create-text {
         min-height: 180px;
+        width: 100%;
     }
 }
 input[type="file"] {

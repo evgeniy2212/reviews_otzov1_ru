@@ -44,16 +44,25 @@ class ComplainController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  UpdateComplainRequest  $request
+     * @param  int  $modelId
+     * @param  int  $modelType
      * @return \Illuminate\Http\Response
      */
-    public function updateComplainReview(UpdateComplainRequest $request, Review $review)
+    public function updateComplainReview(
+        UpdateComplainRequest $request,
+        int $modelId,
+        string $modelType)
     {
-        Complain::whereReviewId($review->id)->update(['is_new' => 0]);
+        $complainModel = $modelType::findOrFail($modelId);
+        Complain::whereModelId($modelId)
+            ->whereModelType($modelType)
+            ->update(['is_new' => 0]);
         $request->merge(['is_published' => $request->is_blocked ? 0 : 1]);
-        $review->update($request->all());
+        $complainModel->update($request->all());
 
-        return redirect()->back()->withSuccess([__('service/admin.review_updated_successfully')]);
+        return redirect()
+            ->back()
+            ->withSuccess([__('service/admin.review_updated_successfully')]);
     }
 }

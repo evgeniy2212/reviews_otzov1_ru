@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddComplainRequest;
-use App\Models\Review;
+use App\Models\Complain;
 
 class ComplainController extends Controller
 {
     public function addComplain(AddComplainRequest $request){
-        $reviewer = Review::findOrFail($request->review_id)->user;
+        $reviewer = $request->model_type::findOrFail($request->model_id)->user;
         $reviewer->is_blocked_cnt = ++$reviewer->is_blocked_cnt;
         $reviewer->save();
-        auth()->user()->complains()->attach($request->review_id, ['msg' => $request->msg]);
+        Complain::create(
+            [
+                'model_type' => $request->model_type,
+                'model_id' => $request->model_id,
+                'msg' => $request->msg,
+                'user_id' => auth()->id()
+            ]);
 
         return redirect()->back()->withSuccess([__('service/index.complain.success')]);
     }

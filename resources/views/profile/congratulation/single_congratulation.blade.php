@@ -57,27 +57,31 @@
                         </span>
                     </p>
                 </div>
-                <div class="profile-single-congratulation-button">
-                        <a type="button"
-                           href="{{ route('profile-congratulations.edit', $congratulation->id) }}">
-                            @lang('service/index.edit')
-                        </a>
-                        <a data-toggle="modal"
-                           type="button"
-                           class="deleteReview"
-                           data-review-id="{{ $congratulation->id }}"
-                           data-review-is-owner="1"
-                           data-review-name="{{ $congratulation->full_name }}"
-                           data-type="congratulation"
-                           data-action="{{ $congratulation->is_private ? route("delete-private-congratulations", [":is_owner", ":id"]) : route("profile-congratulations.destroy", ":id") }}"
-                           data-target="#deleteReviewModal">
-                            @lang('service/index.delete')
-                        </a>
-                    @if($congratulation->is_private)
-                        <span style="text-shadow: 0px 0px 4px #ff0000;color: #5800008f;width: 100%">
-                            PRIVATE
-                        </span>
-                    @endif
+              <div class="profile-single-congratulation-button {{ !$congratulation->is_blocked ?: 'profile-single-review-blocked' }}">
+                  @if($congratulation->is_blocked)
+                      <span>Congratulation blocked due to complaints.</span>
+                  @else
+                      <a type="button"
+                         href="{{ route('profile-congratulations.edit', $congratulation->id) }}">
+                          @lang('service/index.edit')
+                      </a>
+                      <a data-toggle="modal"
+                         type="button"
+                         class="deleteReview"
+                         data-review-id="{{ $congratulation->id }}"
+                         data-review-is-owner="1"
+                         data-review-name="{{ $congratulation->full_name }}"
+                         data-type="congratulation"
+                         data-action="{{ $congratulation->is_private ? route("delete-private-congratulations", [":is_owner", ":id"]) : route("profile-congratulations.destroy", ":id") }}"
+                         data-target="#deleteReviewModal">
+                          @lang('service/index.delete')
+                      </a>
+                      @if($congratulation->is_private)
+                          <span style="text-shadow: 0px 0px 4px #ff0000;color: #5800008f;width: 100%">
+                                PRIVATE
+                            </span>
+                      @endif
+                  @endif
                 </div>
             </div>
     </div>

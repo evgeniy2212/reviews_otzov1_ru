@@ -143,8 +143,10 @@
         });
 
         $('[id^="complainButton"]').click(function(event) {
-            let reviewId = $(this).data('review');
-            $('#complainForm').find("input[name='review_id']").val(reviewId);
+            let modelId = $(this).data('review-model-id');
+            let modelType = $(this).data('review-model-type');
+            $('#complainForm').find("input[name='model_id']").val(modelId);
+            $('#complainForm').find("input[name='model_type']").val(modelType);
         });
 
         $('[id^="profileMessageButton"]').click(function(event) {
