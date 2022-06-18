@@ -276,7 +276,7 @@
                 }
             });
             review.find('.review-textarea').toggle(750);
-            $(this).text().trim() !== 'Close' ? $(this).text('Close') : $(this).text('Complains (' + $(this).data('complains') + ')');
+            $(this).text().trim() !== 'Закрыть' ? $(this).text('Закрыть') : $(this).text('Жалобы (' + $(this).data('complains') + ')');
         });
 
         $('#review-create-text').click(function(data){

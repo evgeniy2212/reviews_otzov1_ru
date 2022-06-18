@@ -100,6 +100,7 @@ Route::group(
         ], function(){
             Route::get('/{review_item}', 'ReviewController@index')->name('reviews');
             Route::get('/show/{review}', 'ReviewController@show')->name('show-review');
+            Route::get('/show_congratulation/{id}', 'ReviewController@showCongratulation')->name('show-congratulation');
             Route::get('/presaving-show/{review}', 'ReviewController@presavingShow')->name('presavingShow-review');
             Route::get('create/{review_item}', 'ReviewController@create')
                 ->name('create-review')

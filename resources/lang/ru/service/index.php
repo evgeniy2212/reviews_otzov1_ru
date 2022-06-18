@@ -39,6 +39,7 @@ return [
     'password_enter' => 'Пожалуйста введите ваш пароль',
     'continue' => 'Продолжить',
     'close' => 'Закрыть',
+    'open' => 'Открыть',
     'forgot_password_question' => 'Забыли пароль?',
     'enter_email' => 'Пожалуйста введите используемый E-Mail.',
     'personal_info' => 'Персональная информация',

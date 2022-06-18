@@ -428,6 +428,6 @@
                 $(this).css('display', 'flex');
             }
         });
-        $(this).text().trim() !== 'Close' ? $(this).text('Close') : $(this).text('Complains (' + $(this).data('complains') + ')');
+        $(this).text().trim() !== 'Close' ? $(this).text('Закрыть') : $(this).text('Жалобы (' + $(this).data('complains') + ')');
     });
 })(jQuery);

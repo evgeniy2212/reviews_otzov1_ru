@@ -42,17 +42,23 @@ class Country extends Model implements TranslatableContract
     }
 
     public function getAllCountries(){
-        return $this->all()
+        return $this->enabled()
+            ->get()
             ->mapWithKeys(function($item, $key) {
                 return [$item->id => $item->country];
             });
     }
 
     public function getCountriesContainRegions(){
-        return $this->whereHas('regions')
+        return $this->enabled()
+            ->whereHas('regions')
             ->get()
             ->mapWithKeys(function($item, $key) {
                 return [$item->id => $item->country];
             });
+    }
+
+    public function scopeEnabled($query){
+        return $query->where('is_enable', true);
     }
 }

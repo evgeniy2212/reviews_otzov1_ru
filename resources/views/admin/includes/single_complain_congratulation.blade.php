@@ -3,39 +3,6 @@
         <div>
             <span>{{ $review->created_at }}</span>
         </div>
-        <div>
-            <div class="review-stars">
-                @for($i=0;$i < 5; $i++)
-                    @if($i < $review->rating)
-                        &#9733;
-                    @else
-                        &#9734;
-                    @endif
-                @endfor
-            </div>
-        </div>
-        <div class="d-flex justify-content-around w-100">
-            <div>
-                <label for="like-{{ $review->id }}">{{ $review->likes }}</label>
-                <input data-review-id="{{ $review->id }}"
-                       data-reaction-name="likes"
-                       id="like-{{ $review->id }}"
-                       class="like-reaction"
-                       type="image"
-                       src="{{ asset('images/positive_like.png') }}"
-                       @auth @else disabled @endauth/>
-            </div>
-            <div>
-                <input data-review-id="{{ $review->id }}"
-                       data-reaction-name="dislikes"
-                       id="dislike-{{ $review->id }}"
-                       class="like-reaction"
-                       type="image"
-                       src="{{ asset('images/negative_like.png') }}"
-                       @auth @else disabled @endauth/>
-                <label for="dislike-{{ $review->id }}">{{ $review->dislikes }}</label>
-            </div>
-        </div>
     </div>
     <div class="profile-single-review-item">
         <div class="w-100 d-flex flex-wrap flex-md-nowrap justify-content-center">
@@ -51,36 +18,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="profile-single-review-review">
+                <div class="profile-single-congratulation">
                     <p>
                         <span class="single-review-holder">
                           @if($review->video)
-                            <video class="videoPreview" style="object-fit: cover" controls>
+                                <video class="videoPreview" style="object-fit: cover" controls>
                                 <source src="{{ $review->video->getVideoUrl() }}" type="video/mp4">
+                                {{--<source src="movie.ogg" type="video/ogg">--}}
                                 Your browser does not support the video tag.
                             </video>
-                          @else
-                            <img src="{{ asset('storage/images/default_img_video.png') }}"
-                                 alt="photo"
-                                 class="videoPreview">
-                          @endif
-                          @if($review->image)
-                            <img src="{{ $review->image->getResizeImageUrl() }}"
-                                 alt=""
-                                 data-full-size-src="{{ $review->image->getImageUrl() }}"
-                                 class="reviewImage previewImage"
-                                 style="cursor: pointer;"
-                                 id="myImg">
-                          @else
-                            <img src="{{ asset('storage/images/default_img.png') }}"
-                                 alt=""
-                                 class="previewImage">
-                          @endif
+                            @else
+                                <img src="{{ asset('storage/images/default_img_video.png') }}"
+                                     alt="photo"
+                                     class="videoPreview">
+                            @endif
+                            @if($review->image)
+                                <img src="{{ $review->image->getResizeImageUrl('congratulations') }}"
+                                     alt=""
+                                     data-full-size-src="{{ $review->image->getImageUrl() }}"
+                                     class="reviewImage previewImage"
+                                     style="cursor: pointer;"
+                                     id="myImg">
+                            @else
+                                <img src="{{ asset('storage/images/default_img.png') }}"
+                                     alt=""
+                                     class="previewImage">
+                            @endif
                         </span>
-                        @if(optional($review->characteristics)->isNotEmpty())
-                            {{ $review->characteristics->pluck('name')->implode(', ') }}
+                        @if($review->category)
+                            <span class="congratulation-category">{{ $review->category->title }}</span><br>
                         @endif
-                        {{ $review->review }}
+                        <span class="congratulation-text">
+                          {{ $review->body }}
+                        </span>
                     </p>
                 </div>
             </div>
@@ -97,14 +67,15 @@
                             @method('PATCH')
                             @csrf
                             <button type="submit"
-                                    id="reviewPublishButton{{ $review->id }}"
-                                    class="otherButton"
-                                    name="is_blocked"
-                                    value="0">
+                                        id="reviewPublishButton{{ $review->id }}"
+                                        class="otherButton"
+                                        name="is_blocked"
+                                        value="0">
                                 @lang('service/admin.complain.block')
                             </button>
                         </form>
-                        <form method="POST" action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
+                        <form method="POST"
+                              action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
                               enctype="multipart/form-data"
                               novalidate=""
                               id="adminReviewForm{{ $review->id }}Unblock"
@@ -112,15 +83,16 @@
                             @method('PATCH')
                             @csrf
                             <button type="submit"
-                                    id="reviewPublishButton{{ $review->id }}"
-                                    class="otherButton"
-                                    name="is_blocked"
-                                    value="1">
+                                        id="reviewPublishButton{{ $review->id }}"
+                                        class="otherButton"
+                                        name="is_blocked"
+                                        value="1">
                                 @lang('service/admin.complain.not_block')
                             </button>
                         </form>
                     @else
-                        <form method="POST" action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
+                        <form method="POST"
+                              action="{{ route('admin.update_complain_review', ['model_id' => $review->id, 'model_type' => get_class($review)]) }}"
                               enctype="multipart/form-data"
                               novalidate=""
                               id="adminReviewForm{{ $review->id }}"

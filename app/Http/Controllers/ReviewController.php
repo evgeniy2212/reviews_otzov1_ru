@@ -9,6 +9,7 @@ use App\Models\Review;
 use App\Models\ReviewCategory;
 use App\Models\ReviewFilter;
 use App\Http\Repositories\ReviewFilterRepository;
+use App\Models\UserCongratulation;
 use App\Notifications\ReviewCreateNotification;
 use App\Services\ReviewService;
 use Illuminate\Http\Request;
@@ -56,6 +57,13 @@ class ReviewController extends Controller
         $reviews = collect([])->merge([$review]);
 
         return view('reviews.show_review', compact('reviews'));
+    }
+
+    public function showCongratulation($id) {
+        $congratulation = UserCongratulation::findOrFail($id);
+        $reviews = collect([])->merge([$congratulation]);
+
+        return view('reviews.show_congratulation', compact('reviews'));
     }
 
     public function search(SearchRequest $request) {
