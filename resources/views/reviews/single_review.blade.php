@@ -201,7 +201,7 @@
                            id="complainButton-{{ $review->id }}">@lang('service/index.complain')</a>
                     @endauth
                 </div>
-                <div class="col-md-5 offset-md-7 col-lg-4 offset-lg-8">
+                <div class="col-md-5 offset-md-7">
                     @auth()
                         <a type="button"
                            href="{{ Request::url() === route('show-review', [$review->id]) ? url()->previous() : route('show-review', [$review->id]) }}"
