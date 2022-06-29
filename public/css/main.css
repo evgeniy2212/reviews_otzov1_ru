@@ -1493,6 +1493,8 @@ button:disabled {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 640px) {
     #instructionModal .instruction-videos {
@@ -1514,6 +1516,10 @@ button:disabled {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(177px + 24px);
+    /*grid-template-columns: repeat(auto-fill, 100px);*/
 }
 #instructionModal .instruction-control{
     display: -webkit-box;
@@ -1530,9 +1536,59 @@ button:disabled {
     -ms-flex-direction: row;
     flex-direction: row;
 }
+
+#instructionModal .previewInstructionImage {
+    width: 100%;
+}
+
+#instructionModal .instruction-videos .otherButton {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#instructionModal .modal-content {
+    padding-left: 84px;
+    padding-right: 84px;
+    width: auto;
+}
+#instructionModal .modal-dialog {
+    display: flex;
+    justify-content: center;
+    max-width: initial;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+@media screen and (max-width: 1280px) {
+    #instructionModal .modal-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
+@media screen and (max-width: 1112px) {
+    #instructionModal .modal-content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #instructionModal .modal-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
 @media screen and (max-width: 640px) {
     #instructionModal .instruction-control{
         display: block;
+    }
+    #instructionModal .modal-dialog {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 #instructionModal .modal-content div, #sliderBodyModal .modal-content div{
