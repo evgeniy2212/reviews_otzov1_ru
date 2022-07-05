@@ -1,3 +1,8 @@
+<script>window.Laravel = {
+        csrfToken: '{{ csrf_token() }}',
+        baseUrl: '{{ url('')  }}',
+        authId: '{{ auth()->id() }}'
+    }</script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

@@ -35,6 +35,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('congratulation:thanksgiving')->cron('0 2 26 11 *')->timezone('America/New_York');
         $schedule->command('congratulation:veterans')->cron('0 2 11 11 *')->timezone('America/New_York');
         $schedule->command('congratulation:remind')->daily()->timezone('America/New_York');
+        $schedule->command('chat_message:remind')->monthly()->timezone('America/New_York');
     }
 
     /**

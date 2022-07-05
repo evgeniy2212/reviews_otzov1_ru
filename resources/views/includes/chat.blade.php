@@ -1,98 +1,98 @@
 <div class="chat__wrapper">
     <div class="chat">
-        <button class="chat__btn js-contacts" type="button">Contacts</button>
-        <button class="chat__btn js-create-contact" type="button">Create contact</button>
+        <button class="chat__btn js-contacts" type="button">Контакты</button>
+        <button class="chat__btn js-create-contact" type="button">Создать контакт</button>
         <div class="chats">
             <div class="chat__contact is-online js-begin-chat">
-                <span class="chat__name">Demo User 1</span>
+                <span class="chat__name">Контакт 1</span>
                 <span class="chat__status">online</span>
                 <span class="chat__count">5</span>
             </div>
             <div class="chat__contact js-begin-chat">
-                <span class="chat__name">Demo User 2</span>
+                <span class="chat__name">Контакт 2</span>
                 <span class="chat__status">offline</span>
                 <span class="chat__count">2</span>
             </div>
         </div>
-        <button class="chat__close js-close-chat" type="button">Close</button>
+        <button class="chat__close js-close-chat" type="button">Закрыть</button>
         <div class="chat__inner">
             <div class="chat__contacts">
                 <div class="chat__contact is-online js-chat-contact">
-                    <span class="chat__name">Demo User 1</span>
+                    <span class="chat__name">Контакт 1</span>
                     <span class="chat__status">online</span>
                 </div>
-                <div class="chat__contacts js-chat-contact">
-                    <span class="chat__name">Demo User 2</span>
+                <div class="chat__contact js-chat-contact">
+                    <span class="chat__name">Контакт 2</span>
                     <span class="chat__status">offline</span>
                 </div>
             </div>
-            <button class="chat__close js-close-chat-contacts" type="button">Close</button>
+            <button class="chat__close js-close-chat-contacts" type="button">Закрыть</button>
         </div>
         <div class="chat__settings">
             <div class="chat__contact is-online">
-                <span class="chat__name">Demo User 1</span>
+                <span class="chat__name">Контакт 1</span>
                 <span class="chat__status">ON Line</span>
             </div>
             <div class="chat__row">
-                <button class="chat__close" type="button">Send link</button>
-                <button class="chat__close js-edit-chat" type="button">Edit contact</button>
-                <button class="chat__close js-begin-chat" type="button">Open chat</button>
-                <button class="chat__close js-open-delete" type="button">Delete contact</button>
+                <button class="chat__close" type="button">Отправить ссылку</button>
+                <button class="chat__close js-edit-chat" type="button">Изменить контакт</button>
+                <button class="chat__close js-begin-chat" type="button">Открыть чат</button>
+                <button class="chat__close js-open-delete" type="button">Удалить чат</button>
             </div>
-            <button class="chat__close js-close-settings" type="button">Close</button>
+            <button class="chat__close js-close-settings" type="button">Закрыть</button>
             <div class="chat__edit">
-                <p class="chat__subtitle">Edit contact</p>
-                <input class="form-control input" type="text" placeholder="Edit chat">
+                <p class="chat__subtitle">Изменить контакт</p>
+                <input class="form-control input" type="text" placeholder="Ваши данные">
                 <div class="chat__buttons">
                     <button class="chat__close"
                             style="margin-bottom: 0px"
                             type="submit">
-                        Edit
+                        Изменить
                     </button>
                     <button class="chat__close js-close-edit"
                             style="margin-bottom: 0px"
                             type="button">
-                        Close
+                        Закрыть
                     </button>
                 </div>
             </div>
             <div class="chat__delete">
-                <p class="chat__subtitle">Delete contact</p>
-                <input class="form-control input" type="text" placeholder="Edit chat">
+                <p class="chat__subtitle">Удалить контакт</p>
+                <input class="form-control input" type="text" placeholder="Ваши данные">
                 <div class="chat__buttons">
                     <button class="chat__close"
                             style="margin-bottom: 0px"
                             type="submit">
-                        Delete
+                        Удалить
                     </button>
                     <button class="chat__close js-close-chat-delete"
                             style="margin-bottom: 0px"
                             type="button">
-                        Close
+                        Закрыть
                     </button>
                 </div>
             </div>
         </div>
         <div class="chat__create">
             <div class="chat__inputs">
-                <input class="chat__input" type="text" placeholder="First Name">
-                <input class="chat__input" type="text" placeholder="Last Name">
-                <input class="chat__input" type="email" placeholder="Email">
+                <input class="chat__input" type="text" placeholder="Имя">
+                <input class="chat__input" type="text" placeholder="Фамилия">
+                <input class="chat__input" type="email" placeholder="Почта">
             </div>
             <div class="chat__buttons">
-                <button class="chat__close" type="button">Invite</button>
-                <button class="chat__close js-close-create" type="button">Close</button>
+                <button class="chat__close" type="button">Пригласить</button>
+                <button class="chat__close js-close-create" type="button">Закрыть</button>
             </div>
         </div>
         <div class="chat__wrap">
             <div class="chat__contact is-online">
-                <span class="chat__name">Demo User 1</span>
-                <span class="chat__status">Connected</span>
+                <span class="chat__name">Пользоватеь 1</span>
+                <span class="chat__status">На связи</span>
             </div>
             <div class="chat__buttons three__mod">
-                <button class="chat__close js-show-btns" type="button">Edit</button>
-                <button class="chat__close js-select-all" type="button" style="display: none;">Select all</button>
-                <button class="chat__close js-delete-messages" type="button" style="display: none;">Delete</button>
+                <button class="chat__close js-show-btns" type="button">Изменить</button>
+                <button class="chat__close js-select-all" type="button" style="display: none;">Выбрать все</button>
+                <button class="chat__close js-delete-messages" type="button" style="display: none;">Удалить</button>
             </div>
             <div class="chat__window">
                 <div class="chat__holder">
@@ -105,7 +105,7 @@
                                 <label for="messageTest{{$i}}"></label>
                             </div>
                             <img class="chat__decor left__mod" src="{{ asset('images/message-decor.png') }}" alt="#">
-                            <p>Receiver message</p>
+                            <p>Получатель сообщения</p>
                         </div>
                     @endfor
                 </div>
@@ -113,7 +113,7 @@
             <div class="chat__field-wrap">
                 <div class="chat__field">
                     <img class="chat__decor left__mod" src="{{ asset('images/message-decor.png') }}" alt="#">
-                    <textarea class="chat__textarea js-chat-textarea" placeholder="message"></textarea>
+                    <textarea class="chat__textarea js-chat-textarea" placeholder="сообщение"></textarea>
                     <img class="chat__decor right__mod" src="{{ asset('images/message-decor.png') }}" alt="#">
                 </div>
                 <input class="btn__emoji js-btn-emoji"
@@ -129,22 +129,22 @@
                 </div>
             </div>
             <div class="chat__buttons six__mod">
-                <button data-tooltip="First of all need to select а necessary review by clicking &quot;Open&quot; button"
+                <button data-tooltip="В первую очередь необходимо выбрать нужный отзыв, нажав кнопку &quot;Открыть&quot;"
                         class="chat__close"
                         type="button">Twitter</button>
-                <button data-tooltip="First of all need to select а necessary review by clicking &quot;Open&quot; button"
+                <button data-tooltip="В первую очередь необходимо выбрать нужный отзыв, нажав кнопку &quot;Открыть&quot;"
                         class="chat__close"
                         type="button">Facebook</button>
-                <button data-tooltip="First of all need to select а necessary review by clicking &quot;Open&quot; button"
+                <button data-tooltip="В первую очередь необходимо выбрать нужный отзыв, нажав кнопку &quot;Открыть&quot;"
                         class="chat__close"
                         type="button">Telegram</button>
                 <button class="chat__close"
-                        type="button">Send</button>
+                        type="button">Отправить</button>
                 <button class="chat__close"
-                        data-tooltip="First of all need to select а necessary review by clicking &quot;Open&quot; button"
-                        type="button">Send Link</button>
+                        data-tooltip="В первую очередь необходимо выбрать нужный отзыв, нажав кнопку &quot;Открыть&quot;"
+                        type="button">Отправить ссылку</button>
                 <button class="chat__close js-close-messages"
-                        type="button">Close</button>
+                        type="button">Закрыть</button>
             </div>
         </div>
     </div>
@@ -156,6 +156,6 @@
                 c8.6-1,15.5-5.8,16.7-6.7c1.4,0.3,4.6,0.8,7.2,0.8c16.6,0,32-11.2,32-25S48.6,3,32,3z"/>
         </svg>
     </span>
-        <span class="chat__open-text">Chat</span>
+        <span class="chat__open-text">Чат</span>
     </button>
 </div>

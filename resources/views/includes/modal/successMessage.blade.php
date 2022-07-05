@@ -1,9 +1,10 @@
 <div class="modal fade successModalDialog" id="successMessage" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
+            <span id="successMessageContent" hidden></span>
             @if(session()->has('success'))
                 @foreach (session()->get('success') as $message)
-                    <span>{!! $message !!}</span>
+                    <span class="successMessageContent">{!! $message !!}</span>
                 @endforeach
             @endif
             <div class="d-flex justify-content-center">

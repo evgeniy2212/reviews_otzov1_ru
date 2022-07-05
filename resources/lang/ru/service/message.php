@@ -2,6 +2,8 @@
 return [
     'mail.hi_this' => 'Привет, это',
     'mail.to_the' => 'Перейти',
+    'mail.hi' => 'Привет, ',
+    'mail.agree' => 'Согласен',
     'mail.regards' => 'С найлучшими пожелнияим',
     'log_into_account' => 'Авторизируйтесь и оставьте Ваш комментарий!',
     'communication_reviewer' => 'Открыть для коммуникации с ревьювером',

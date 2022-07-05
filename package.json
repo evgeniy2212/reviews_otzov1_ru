@@ -26,6 +26,11 @@
     "dependencies": {
         "bootstrap-icons": "^1.0.0-alpha4",
         "glyphicons-only-bootstrap": "^1.0.1",
-        "highlight-within-textarea": "^2.0.5"
+        "highlight-within-textarea": "^2.0.5",
+        "laravel-echo": "^1.11.3",
+        "pusher-js": "^7.0.6",
+        "vue-chat-scroll": "^1.4.0",
+        "vue-infinite-loading": "^2.4.5",
+        "vue-ui-preloader": "^1.2.1"
     }
 }
