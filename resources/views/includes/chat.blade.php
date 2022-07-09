@@ -120,12 +120,10 @@
                        type="image"
                        src="{{ asset('/images/emoji_1.png') }}"/>
                 <div class="chat__emoji-holder">
-                        <span class="chat__emoji">
-                            @for($i=1;$i<=24;$i++)
-                                <img src="{{ asset('/images/emoji_' . $i . '.png') }}"
-                                     style="width: auto;height: 32px">
-                            @endfor
-                        </span>
+                    @for($i=1;$i<=24;$i++)
+                        <img src="{{ asset('/images/emoji_' . $i . '.png') }}"
+                             style="width: auto;height: 32px">
+                    @endfor
                 </div>
             </div>
             <div class="chat__buttons six__mod">
