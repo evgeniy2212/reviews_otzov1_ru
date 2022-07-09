@@ -122,7 +122,7 @@
                 <div class="chat__emoji-holder">
                     @for($i=1;$i<=24;$i++)
                         <img src="{{ asset('/images/emoji_' . $i . '.png') }}"
-                             style="width: auto;height: 32px">
+                             class="chat__emoji">
                     @endfor
                 </div>
             </div>
