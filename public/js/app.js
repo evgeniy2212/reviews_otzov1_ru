@@ -2174,6 +2174,10 @@ __webpack_require__.r(__webpack_exports__);
       }).full_name = contact.full_name;
     },
     setLocalStorageSettings: function setLocalStorageSettings() {
+      if (localStorage.showChat !== undefined) {
+        this.showChat = localStorage.showChat == 'true' ? true : false;
+      }
+
       if (localStorage.activeScreen !== undefined) {
         this.setActiveScreen(localStorage.activeScreen);
       }
@@ -2185,10 +2189,6 @@ __webpack_require__.r(__webpack_exports__);
 
       if (localStorage.currentChatId !== undefined) {
         this.setCurrentChat(localStorage.currentChatId);
-      }
-
-      if (localStorage.showChat !== undefined) {
-        this.showChat = localStorage.showChat == 'true' ? true : false;
       }
     }
   },
