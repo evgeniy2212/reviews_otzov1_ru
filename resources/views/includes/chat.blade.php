@@ -163,5 +163,6 @@
         localStorage.activeContact = undefined;
         localStorage.currentChatId = undefined;
         localStorage.showChat = undefined;
+        localStorage.authId = undefined;
     });
 </script>

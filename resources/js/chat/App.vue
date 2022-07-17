@@ -256,22 +256,28 @@ export default {
             this.contacts.find(item => item.id === contact.id).full_name = contact.full_name;
         },
         setLocalStorageSettings(){
-            if(localStorage.showChat !== undefined)
-            {
-                this.showChat = localStorage.showChat == 'true' ? true :false;
-            }
-            if(localStorage.activeScreen !== undefined)
-            {
-                this.setActiveScreen(localStorage.activeScreen);
-            }
-            if(localStorage.activeContact !== undefined)
-            {
-                const contact = JSON.parse(localStorage.activeContact);
-                this.setActiveContact(contact);
-            }
-            if(localStorage.currentChatId !== undefined)
-            {
-                this.setCurrentChat(localStorage.currentChatId);
+            if(localStorage.authId === undefined
+                || localStorage.authId == this.authId){
+                localStorage.authId = this.authId;
+                if(localStorage.showChat !== undefined)
+                {
+                    this.showChat = localStorage.showChat == 'true' ? true :false;
+                }
+                if(localStorage.activeScreen !== undefined)
+                {
+                    this.setActiveScreen(localStorage.activeScreen);
+                }
+                if(localStorage.activeContact !== undefined)
+                {
+                    const contact = JSON.parse(localStorage.activeContact);
+                    this.setActiveContact(contact);
+                }
+                if(localStorage.currentChatId !== undefined)
+                {
+                    this.setCurrentChat(localStorage.currentChatId);
+                }
+            } else {
+                localStorage.authId = this.authId;
             }
         }
     },
